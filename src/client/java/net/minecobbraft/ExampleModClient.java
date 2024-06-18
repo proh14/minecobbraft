@@ -1,4 +1,4 @@
-package com.example;
+package net.minecobbraft;
 
 import net.fabricmc.api.ClientModInitializer;
 
