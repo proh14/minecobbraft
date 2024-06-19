@@ -8,18 +8,16 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 
 public class ModelProvider extends FabricModelProvider {
-    public ModelProvider(FabricDataOutput output) {
-        super(output);
-    }
+  public ModelProvider(FabricDataOutput output) {
+    super(output);
+  }
 
-    @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+  @Override
+  public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) { }
 
-    }
-
-    @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(Items.WAND_OF_PROH, Models.GENERATED);
-        itemModelGenerator.register(Items.KAKTUS_DAGGER, Models.GENERATED);
-    }
+  @Override
+  public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    itemModelGenerator.register(Items.WAND_OF_PROH, Models.GENERATED);
+    itemModelGenerator.register(Items.KAKTUS_DAGGER, Models.GENERATED);
+  }
 }

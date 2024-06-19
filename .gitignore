@@ -28,6 +28,9 @@ bin/
 
 *.DS_Store
 
+# jdtls
+.factorypath
+
 # fabric
 
 run/

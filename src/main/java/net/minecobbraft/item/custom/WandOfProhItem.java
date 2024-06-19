@@ -13,22 +13,22 @@ import net.minecraft.util.Hand;
 import java.util.List;
 
 public class WandOfProhItem extends Item {
-    public WandOfProhItem(Settings settings){
-        super(settings);
-    }
+  public WandOfProhItem(Settings settings){
+    super(settings);
+  }
 
-    @Override
-    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
-        if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
+  @Override
+  public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
+    if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
 
-        user.getItemCooldownManager().set(this, 10 * World.SECOND);
-        stack.damage(1, user, EquipmentSlot.MAINHAND);
-        entity.setVelocity(entity.getVelocity().add(0,5,0));
-        return ActionResult.success(true);
-    }
+    user.getItemCooldownManager().set(this, 10 * World.SECOND);
+    stack.damage(1, user, EquipmentSlot.MAINHAND);
+    entity.setVelocity(entity.getVelocity().add(0,5,0));
+    return ActionResult.success(true);
+  }
 
-    @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("item.minecobbraft.wand_of_proh.tooltip"));
-    }
+  @Override
+  public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+    tooltip.add(Text.translatable("item.minecobbraft.wand_of_proh.tooltip"));
+  }
 }
