@@ -1,25 +1,23 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "minecobbraft",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Minecobbraft",
+	"description": "Minecobbraft is a Minecraft mod which injects the chaotic and GOAT energy of CobbCoding streamer memes into your world!",
 	"authors": [
-		"Me!"
+		"proh14",
+		"DetectiveKaktus"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/proh14/minecobbraft",
+		"sources": "https://github.com/proh14/minecobbraft"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+			"net.minecobbraft.Minecobbraft"
 		]
 	},
 	"mixins": [
@@ -36,6 +34,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"sodium": "*"
 	}
 }
