@@ -1,7 +1,6 @@
 package net.minecobbraft;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.loader.impl.FabricLoaderImpl;
 import net.minecobbraft.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

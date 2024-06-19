@@ -18,6 +18,9 @@
 	"entrypoints": {
 		"main": [
 			"net.minecobbraft.Minecobbraft"
+		],
+		"fabric-datagen": [
+			"net.minecobbraft.DataGenerator"
 		]
 	},
 	"mixins": [
