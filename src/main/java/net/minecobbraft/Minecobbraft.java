@@ -10,6 +10,9 @@ public class Minecobbraft implements ModInitializer {
 	public static final String MOD_ID = "minecobbraft";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	// This value is equal to one second measured in Minecraft ticks.
+	public static final int SECOND = 20;
+
 	@Override
 	public void onInitialize() {
 		Items.registerAllItems();
