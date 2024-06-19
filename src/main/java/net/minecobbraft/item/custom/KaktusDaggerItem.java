@@ -1,5 +1,7 @@
 package net.minecobbraft.item.custom;
 
+import net.minecobbraft.utils.World;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -12,7 +14,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import java.util.List;
-import static net.minecobbraft.Minecobbraft.SECOND;
 
 public class KaktusDaggerItem extends SwordItem {
     public KaktusDaggerItem(ToolMaterial toolMaterial, Settings settings) {
@@ -23,8 +24,9 @@ public class KaktusDaggerItem extends SwordItem {
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
         if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
 
-        user.getItemCooldownManager().set(this, 10 * SECOND);
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * SECOND), user);
+        user.getItemCooldownManager().set(this, 10 * World.SECOND);
+        stack.damage(1, user, EquipmentSlot.MAINHAND);
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * World.SECOND), user);
         return ActionResult.success(true);
     }
 

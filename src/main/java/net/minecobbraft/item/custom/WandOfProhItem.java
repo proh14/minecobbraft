@@ -1,5 +1,7 @@
 package net.minecobbraft.item.custom;
 
+import net.minecobbraft.utils.World;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -8,10 +10,7 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
-import net.minecraft.util.math.Vec3d;
-
 import java.util.List;
-
 
 public class WandOfProhItem extends Item {
     public WandOfProhItem(Settings settings){
@@ -20,6 +19,10 @@ public class WandOfProhItem extends Item {
 
     @Override
     public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
+        if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
+
+        user.getItemCooldownManager().set(this, 10 * World.SECOND);
+        stack.damage(1, user, EquipmentSlot.MAINHAND);
         entity.setVelocity(entity.getVelocity().add(0,5,0));
         return ActionResult.success(true);
     }

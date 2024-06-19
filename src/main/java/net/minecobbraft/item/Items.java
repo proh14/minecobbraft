@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.item.custom.KaktusDaggerItem;
 import net.minecobbraft.item.custom.WandOfProhItem;
+import net.minecobbraft.utils.World;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.SwordItem;
@@ -15,10 +16,13 @@ import net.minecraft.util.Identifier;
 
 // Helper class for registering all the items :D
 public class Items {
-    private static final Item WAND_OF_PROH = registerItem("wand_of_proh", new WandOfProhItem(new Item.Settings()));
-    private static final Item KAKTUS_DAGGER = registerItem("kaktus_dagger", new KaktusDaggerItem(ToolMaterials.IRON,
-            new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 3, -2.4f))
-                    .maxCount(1)));
+    private static final Item WAND_OF_PROH = registerItem("wand_of_proh", new WandOfProhItem(new Item.Settings()
+            .maxCount(1)
+            .maxDamage(World.LOW_MEDIUM_DURABILITY)));
+    private static final Item KAKTUS_DAGGER = registerItem("kaktus_dagger", new KaktusDaggerItem(ToolMaterials.IRON, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 3, -2.4f))
+            .maxCount(1)
+            .maxDamage(World.LOW_MEDIUM_DURABILITY)));
 
 
     private static Item registerItem(String name, Item item){
