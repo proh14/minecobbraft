@@ -21,7 +21,6 @@ public class WandOfProhItem extends Item {
   public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
     if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
 
-    user.getItemCooldownManager().set(this, 10 * World.SECOND);
     stack.damage(1, user, EquipmentSlot.MAINHAND);
     entity.setVelocity(entity.getVelocity().add(0,5,0));
     return ActionResult.success(true);
