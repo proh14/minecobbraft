@@ -5,5 +5,8 @@
   "item.minecobbraft.kaktus_dagger": "Kaktus Dagger",
   "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
 
-  "block.minecobbraft.js_ore": "JS Ore"
+
+  "item.minecobbraft.javascript": "Javascript",
+
+  "block.minecobbraft.js_ore": "JS Ore",
 }

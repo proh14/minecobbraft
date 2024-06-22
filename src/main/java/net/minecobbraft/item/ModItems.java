@@ -25,7 +25,7 @@ public class ModItems {
     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 3, -2.4f))
     .maxCount(1)
     .maxDamage(World.LOW_MEDIUM_DURABILITY)));
-
+  public static final Item JAVASCIRPT = registerItem("javascript", new Item(new Item.Settings()));
 
   private static Item registerItem(String name, Item item){
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);

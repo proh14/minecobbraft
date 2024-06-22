@@ -22,5 +22,6 @@ public class ModelProvider extends FabricModelProvider {
   public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     itemModelGenerator.register(ModItems.WAND_OF_PROH, Models.GENERATED);
     itemModelGenerator.register(ModItems.KAKTUS_DAGGER, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCIRPT, Models.GENERATED);
   }
 }

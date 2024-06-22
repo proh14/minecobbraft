@@ -3,6 +3,7 @@ package net.minecobbraft;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecobbraft.datagen.BlockTagProvider;
+import net.minecobbraft.datagen.LootTableProvider;
 import net.minecobbraft.datagen.ModelProvider;
 
 public class DataGenerator implements DataGeneratorEntrypoint {
@@ -12,5 +13,6 @@ public class DataGenerator implements DataGeneratorEntrypoint {
 
     pack.addProvider(ModelProvider::new);
     pack.addProvider(BlockTagProvider::new);
+    pack.addProvider(LootTableProvider::new);
   }
 }
