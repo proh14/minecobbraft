@@ -1,8 +1,8 @@
 package net.minecobbraft;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecobbraft.block.Blocks;
-import net.minecobbraft.item.Items;
+import net.minecobbraft.block.ModBlocks;
+import net.minecobbraft.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,7 +12,7 @@ public class Minecobbraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Items.registerAllItems();
-		Blocks.registerModBlocks();
+		ModItems.registerAllItems();
+		ModBlocks.registerModBlocks();
 	}
 }

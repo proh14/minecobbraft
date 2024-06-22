@@ -8,8 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class Blocks {
-
+public class ModBlocks {
   public static final Block JS_ORE = registerBlock("js_ore", new Block(Block.Settings.copy(net.minecraft.block.Blocks.IRON_BLOCK)));
 
 
@@ -20,7 +19,7 @@ public class Blocks {
 
   private static Item registerBlockItem(String name, Block block) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name),
-            new BlockItem(block, new Item.Settings()));
+      new BlockItem(block, new Item.Settings()));
   }
 
   public static void registerModBlocks() {
