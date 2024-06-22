@@ -2,6 +2,7 @@ package net.minecobbraft.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecobbraft.block.Blocks;
 import net.minecobbraft.item.Items;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -13,7 +14,9 @@ public class ModelProvider extends FabricModelProvider {
   }
 
   @Override
-  public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) { }
+  public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+    blockStateModelGenerator.registerSimpleCubeAll(Blocks.JS_ORE);
+  }
 
   @Override
   public void generateItemModels(ItemModelGenerator itemModelGenerator) {

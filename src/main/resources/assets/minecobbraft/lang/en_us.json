@@ -3,5 +3,7 @@
   "item.minecobbraft.wand_of_proh.tooltip": "yeet?!",
 
   "item.minecobbraft.kaktus_dagger": "Kaktus Dagger",
-  "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!"
+  "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
+
+  "block.minecobbraft.js_ore": "JS Ore"
 }
