@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
-  public static final Block JS_ORE =
+  public static final Block JAVASCRIPT_ORE =
           registerBlock("javascript_ore", new ExperienceDroppingBlock(UniformIntProvider.create(0, 0), Block.Settings.copy(Blocks.STONE)));
   public static final Block THEROCK = registerBlock("therock", new Block(AbstractBlock.Settings.copy(Blocks.NETHERRACK).sounds(ModSounds.THEROCK_SOUNDS)));
 

@@ -1,6 +1,7 @@
 package net.minecobbraft.item.custom;
 
 import net.minecobbraft.utils.World;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -24,6 +25,7 @@ public class KaktusDaggerItem extends SwordItem {
 
   @Override
   public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+    stack.damage(1, attacker, EquipmentSlot.MAINHAND);
     target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * World.SECOND), attacker);
     return false;
   }

@@ -25,11 +25,16 @@ public class ModItems {
           .maxDamage(World.LOW_MEDIUM_DURABILITY)));
 
   public static final Item JAVASCRIPT = registerItem("javascript", new Item(new Item.Settings()));
-  public static final Item JAVASCRIPT_PICKAXE = registerItem("javascript_pickaxe", new PickaxeItem(ModToolMaterial.JAVASCRIPT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
-  public static final Item JAVASCRIPT_AXE = registerItem("javascript_axe", new AxeItem(ModToolMaterial.JAVASCRIPT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
-  public static final Item JAVASCRIPT_SHOVEL = registerItem("javascript_shovel", new ShovelItem(ModToolMaterial.JAVASCRIPT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0,1))));
-  public static final Item JAVASCRIPT_HOE = registerItem("javascript_hoe", new HoeItem(ModToolMaterial.JAVASCRIPT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
-  public static final Item JAVASCRIPT_SWORD = registerItem("javascript_sword", new SwordItem(ModToolMaterial.JAVASCRIPT, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+  public static final Item JAVASCRIPT_PICKAXE = registerItem("javascript_pickaxe", new PickaxeItem(ModToolMaterial.JAVASCRIPT,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+  public static final Item JAVASCRIPT_AXE = registerItem("javascript_axe", new AxeItem(ModToolMaterial.JAVASCRIPT,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+  public static final Item JAVASCRIPT_SHOVEL = registerItem("javascript_shovel", new ShovelItem(ModToolMaterial.JAVASCRIPT,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0,1))));
+  public static final Item JAVASCRIPT_HOE = registerItem("javascript_hoe", new HoeItem(ModToolMaterial.JAVASCRIPT,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+  public static final Item JAVASCRIPT_SWORD = registerItem("javascript_sword", new SwordItem(ModToolMaterial.JAVASCRIPT,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
 
 
   private static Item registerItem(String name, Item item) {
@@ -39,15 +44,26 @@ public class ModItems {
   private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
     entries.add(WAND_OF_PROH);
     entries.add(KAKTUS_DAGGER);
+    entries.addAfter(Items.WOODEN_SWORD, JAVASCRIPT_SWORD);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
-    entries.addAfter(Blocks.COAL_ORE, ModBlocks.JS_ORE);
+    entries.addAfter(Blocks.COAL_ORE, ModBlocks.JAVASCRIPT_ORE);
+  }
+
+  private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
+    entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
+  }
+
+  private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
+    entries.addAfter(Items.GOLD_NUGGET, JAVASCRIPT);
   }
 
   public static void registerAllItems() {
     Minecobbraft.LOGGER.info("Registering all Items for " + Minecobbraft.MOD_ID);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
+    ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
+    ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsItemGroup);
   }
 }

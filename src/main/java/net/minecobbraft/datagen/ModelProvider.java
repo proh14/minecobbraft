@@ -15,7 +15,7 @@ public class ModelProvider extends FabricModelProvider {
 
   @Override
   public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-    blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JS_ORE);
+    blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JAVASCRIPT_ORE);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THEROCK);
   }
 
