@@ -16,6 +16,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
   @Override
   public void generate() {
     addDrop(ModBlocks.JS_ORE, oreDrops(ModBlocks.JS_ORE, ModItems.JAVASCIRPT));
+    addDrop(ModBlocks.THEROCK);
   }
 
 }

@@ -1,6 +1,8 @@
 package net.minecobbraft.block;
 
 import net.minecobbraft.Minecobbraft;
+import net.minecobbraft.sound.ModSounds;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -13,8 +15,8 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
   public static final Block JS_ORE =
-          registerBlock("js_ore", new ExperienceDroppingBlock(UniformIntProvider.create(0,0),Block.Settings.copy(Blocks.STONE)));
-
+          registerBlock("js_ore", new ExperienceDroppingBlock(UniformIntProvider.create(0, 0), Block.Settings.copy(Blocks.STONE)));
+  public static final Block THEROCK = registerBlock("therock", new Block(AbstractBlock.Settings.copy(Blocks.NETHERRACK).sounds(ModSounds.THEROCK_SOUNDS)));
 
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);
@@ -23,7 +25,7 @@ public class ModBlocks {
 
   private static Item registerBlockItem(String name, Block block) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name),
-      new BlockItem(block, new Item.Settings()));
+            new BlockItem(block, new Item.Settings()));
   }
 
   public static void registerModBlocks() {
