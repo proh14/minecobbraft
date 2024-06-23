@@ -23,6 +23,12 @@ public class ModelProvider extends FabricModelProvider {
   public void generateItemModels(ItemModelGenerator itemModelGenerator) {
     itemModelGenerator.register(ModItems.WAND_OF_PROH, Models.GENERATED);
     itemModelGenerator.register(ModItems.KAKTUS_DAGGER, Models.GENERATED);
-    itemModelGenerator.register(ModItems.JAVASCIRPT, Models.GENERATED);
+
+    itemModelGenerator.register(ModItems.JAVASCRIPT, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCRIPT_AXE, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCRIPT_PICKAXE, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCRIPT_SWORD, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCRIPT_HOE, Models.GENERATED);
+    itemModelGenerator.register(ModItems.JAVASCRIPT_SHOVEL, Models.GENERATED);
   }
 }
