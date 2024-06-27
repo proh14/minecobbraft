@@ -6,11 +6,18 @@
   "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
 
   "item.minecobbraft.javascript": "Javascript",
+
   "item.minecobbraft.javascript_axe": "Javascript Axe",
   "item.minecobbraft.javascript_sword": "Javascript Sword",
   "item.minecobbraft.javascript_pickaxe": "Javascript Pickaxe",
   "item.minecobbraft.javascript_hoe": "Javascript Hoe",
   "item.minecobbraft.javascript_shovel": "Javascript Shovel",
+
+  "item.minecobbraft.javascript_helmet": "Javascript Helmet",
+  "item.minecobbraft.javascript_chestplate": "Javascript Chestplate",
+  "item.minecobbraft.javascript_leggings": "Javascript Leggings",
+  "item.minecobbraft.javascript_boots": "Javascript Boots",
+
 
   "block.minecobbraft.javascript_ore": "Javascript Ore",
 

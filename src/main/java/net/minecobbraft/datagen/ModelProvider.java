@@ -7,6 +7,7 @@ import net.minecobbraft.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 
 public class ModelProvider extends FabricModelProvider {
   public ModelProvider(FabricDataOutput output) {
@@ -25,10 +26,17 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.register(ModItems.KAKTUS_DAGGER, Models.HANDHELD);
 
     itemModelGenerator.register(ModItems.JAVASCRIPT, Models.GENERATED);
+
     itemModelGenerator.register(ModItems.JAVASCRIPT_AXE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.JAVASCRIPT_PICKAXE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.JAVASCRIPT_SWORD, Models.HANDHELD);
     itemModelGenerator.register(ModItems.JAVASCRIPT_HOE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.JAVASCRIPT_SHOVEL, Models.HANDHELD);
+
+    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_HELMENT));
+    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_CHESTPLATE));
+    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_LEGGINGS));
+    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_BOOTS));
+
   }
 }
