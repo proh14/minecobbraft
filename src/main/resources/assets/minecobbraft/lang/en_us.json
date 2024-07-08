@@ -29,5 +29,6 @@
   "block.minecobbraft.deepslate_python_ore": "Deepslate Python Ore",
 
   "item.minecobbraft.python_axe": "Python Axe",
-  "item.minecobbraft.python_pickaxe": "Python Pickaxe"
+  "item.minecobbraft.python_pickaxe": "Python Pickaxe",
+  "item.minecobbraft.python_shovel": "Python Shovel"
 }

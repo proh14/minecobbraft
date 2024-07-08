@@ -48,10 +48,12 @@ public class ModItems {
       new Item.Settings().maxDamage(1)));
 
   public static final Item PYTHON = registerItem("python", new Item(new Item.Settings()));
-  public static final Item PYTHON_AXE = registerItem("python_axe", new AxeItem(ModToolMaterial.PYTHON,
-    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, 0))));
   public static final Item PYTHON_PICKAXE = registerItem("python_pickaxe", new PickaxeItem(ModToolMaterial.PYTHON,
-    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, 0))));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -1))));
+  public static final Item PYTHON_AXE = registerItem("python_axe", new AxeItem(ModToolMaterial.PYTHON,
+    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -1))));
+  public static final Item PYTHON_SHOVEL = registerItem("python_shovel", new ShovelItem(ModToolMaterial.PYTHON,
+    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -1))));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -71,7 +73,7 @@ public class ModItems {
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
-    entries.addAfter(Items.IRON_HOE, PYTHON_PICKAXE, PYTHON_AXE);
+    entries.addAfter(Items.IRON_HOE, PYTHON_SHOVEL, PYTHON_PICKAXE, PYTHON_AXE);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
