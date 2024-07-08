@@ -46,6 +46,8 @@ public class ModItems {
   public static final Item JAVASCRIPT_BOOTS = registerItem("javascript_boots", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.BOOTS,
           new Item.Settings().maxDamage(1)));
 
+  public static final Item PYTHON = registerItem("python", new Item(new Item.Settings()));
+
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -68,6 +70,7 @@ public class ModItems {
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.GOLD_NUGGET, JAVASCRIPT);
+    entries.addAfter(Items.IRON_INGOT, PYTHON);
   }
 
   public static void registerAllItems() {

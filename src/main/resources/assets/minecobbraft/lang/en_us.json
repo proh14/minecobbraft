@@ -6,6 +6,8 @@
   "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
 
   "item.minecobbraft.javascript": "Javascript",
+  "item.minecobbraft.javascript.tooltip": "Useless invention of humanity.",
+  "block.minecobbraft.javascript_ore": "Javascript Ore",
 
   "item.minecobbraft.javascript_axe": "Javascript Axe",
   "item.minecobbraft.javascript_sword": "Javascript Sword",
@@ -18,10 +20,9 @@
   "item.minecobbraft.javascript_leggings": "Javascript Leggings",
   "item.minecobbraft.javascript_boots": "Javascript Boots",
 
-
-  "block.minecobbraft.javascript_ore": "Javascript Ore",
-
   "block.minecobbraft.therock": "Therock",
+  "subtitles.minecobbraft.vine_boom": "Ayo?",
 
-  "subtitles.minecobbraft.vine_boom": "Ayo?"
+  "item.minecobbraft.python": "Python",
+  "item.minecobbraft.python.tooltip": "Useful tool but too slow."
 }
