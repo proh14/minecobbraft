@@ -33,7 +33,7 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.register(ModItems.JAVASCRIPT_HOE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.JAVASCRIPT_SHOVEL, Models.HANDHELD);
 
-    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_HELMENT));
+    itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_HELMET));
     itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_CHESTPLATE));
     itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_LEGGINGS));
     itemModelGenerator.registerArmor(((ArmorItem) ModItems.JAVASCIPRT_BOOTS));

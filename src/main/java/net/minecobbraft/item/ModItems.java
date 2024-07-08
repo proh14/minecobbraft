@@ -37,7 +37,7 @@ public class ModItems {
   public static final Item JAVASCRIPT_SWORD = registerItem("javascript_sword", new SwordItem(ModToolMaterial.JAVASCRIPT,
           new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
 
-  public static final Item JAVASCIPRT_HELMENT = registerItem("javascript_helmet", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
+  public static final Item JAVASCIPRT_HELMET = registerItem("javascript_helmet", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
           new Item.Settings().maxDamage(1)));
   public static final Item JAVASCIPRT_CHESTPLATE = registerItem("javascript_chestplate", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.CHESTPLATE,
           new Item.Settings().maxDamage(1)));

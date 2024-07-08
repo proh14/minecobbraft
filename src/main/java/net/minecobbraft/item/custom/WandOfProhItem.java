@@ -1,6 +1,5 @@
 package net.minecobbraft.item.custom;
 
-import net.minecobbraft.utils.World;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
