@@ -48,6 +48,8 @@ public class ModItems {
       new Item.Settings().maxDamage(1)));
 
   public static final Item PYTHON = registerItem("python", new Item(new Item.Settings()));
+  public static final Item PYTHON_AXE = registerItem("python_axe", new AxeItem(ModToolMaterial.PYTHON,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, 0))));
   public static final Item PYTHON_PICKAXE = registerItem("python_pickaxe", new PickaxeItem(ModToolMaterial.PYTHON,
     new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, 0))));
 
@@ -69,7 +71,7 @@ public class ModItems {
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
-    entries.addAfter(Items.IRON_HOE, PYTHON_PICKAXE);
+    entries.addAfter(Items.IRON_HOE, PYTHON_PICKAXE, PYTHON_AXE);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {

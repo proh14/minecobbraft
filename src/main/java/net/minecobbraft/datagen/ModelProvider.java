@@ -42,6 +42,7 @@ public class ModelProvider extends FabricModelProvider {
 
     itemModelGenerator.register(ModItems.PYTHON, Models.GENERATED);
 
+    itemModelGenerator.register(ModItems.PYTHON_AXE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.PYTHON_PICKAXE, Models.HANDHELD);
   }
 }
