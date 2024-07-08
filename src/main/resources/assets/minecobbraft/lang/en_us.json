@@ -26,5 +26,7 @@
   "item.minecobbraft.python": "Python",
   "item.minecobbraft.python.tooltip": "Useful tool but too slow.",
   "block.minecobbraft.python_ore": "Python Ore",
-  "block.minecobbraft.deepslate_python_ore": "Deepslate Python Ore"
+  "block.minecobbraft.deepslate_python_ore": "Deepslate Python Ore",
+
+  "item.minecobbraft.python_pickaxe": "Python Pickaxe"
 }

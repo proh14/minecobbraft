@@ -18,36 +18,38 @@ public class ModItems {
   public static final Item WAND_OF_PROH = registerItem("wand_of_proh", new WandOfProhItem(new Item.Settings()
           .maxCount(1)
           .maxDamage(World.LOW_MEDIUM_DURABILITY)));
-
   public static final Item KAKTUS_DAGGER = registerItem("kaktus_dagger", new KaktusDaggerItem(ToolMaterials.IRON, new Item.Settings()
           .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 3, -2.4f))
           .maxCount(1)
           .maxDamage(World.LOW_MEDIUM_DURABILITY)));
 
   public static final Item JAVASCRIPT = registerItem("javascript", new Item(new Item.Settings()));
-
   public static final Item JAVASCRIPT_PICKAXE = registerItem("javascript_pickaxe", new PickaxeItem(ModToolMaterial.JAVASCRIPT,
-          new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
   public static final Item JAVASCRIPT_AXE = registerItem("javascript_axe", new AxeItem(ModToolMaterial.JAVASCRIPT,
-          new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
   public static final Item JAVASCRIPT_SHOVEL = registerItem("javascript_shovel", new ShovelItem(ModToolMaterial.JAVASCRIPT,
-          new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
   public static final Item JAVASCRIPT_HOE = registerItem("javascript_hoe", new HoeItem(ModToolMaterial.JAVASCRIPT,
-          new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
   public static final Item JAVASCRIPT_SWORD = registerItem("javascript_sword", new SwordItem(ModToolMaterial.JAVASCRIPT,
-          new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
-
-  public static final Item JAVASCRIPT_HELMET = registerItem("javascript_helmet", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
-          new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCRIPT_CHESTPLATE = registerItem("javascript_chestplate", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.CHESTPLATE,
-          new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCRIPT_LEGGINGS = registerItem("javascript_leggings", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.LEGGINGS,
-          new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCRIPT_BOOTS = registerItem("javascript_boots", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.BOOTS,
-          new Item.Settings().maxDamage(1)));
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
+  public static final Item JAVASCRIPT_HELMET = registerItem("javascript_helmet",
+    new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
+      new Item.Settings().maxDamage(1)));
+  public static final Item JAVASCRIPT_CHESTPLATE = registerItem("javascript_chestplate",
+    new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.CHESTPLATE,
+      new Item.Settings().maxDamage(1)));
+  public static final Item JAVASCRIPT_LEGGINGS = registerItem("javascript_leggings",
+    new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.LEGGINGS,
+      new Item.Settings().maxDamage(1)));
+  public static final Item JAVASCRIPT_BOOTS = registerItem("javascript_boots",
+    new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.BOOTS,
+      new Item.Settings().maxDamage(1)));
 
   public static final Item PYTHON = registerItem("python", new Item(new Item.Settings()));
-
+  public static final Item PYTHON_PICKAXE = registerItem("python_pickaxe", new PickaxeItem(ModToolMaterial.PYTHON,
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, 0))));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -67,6 +69,7 @@ public class ModItems {
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
+    entries.addAfter(Items.IRON_HOE, PYTHON_PICKAXE);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
