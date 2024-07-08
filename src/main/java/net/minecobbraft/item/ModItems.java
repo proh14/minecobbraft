@@ -56,6 +56,8 @@ public class ModItems {
     new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -3))));
   public static final Item PYTHON_HOE = registerItem("python_hoe", new HoeItem(ModToolMaterial.PYTHON,
     new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -3))));
+  public static final Item PYTHON_SWORD = registerItem("python_sword", new SwordItem(ModToolMaterial.PYTHON,
+    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.PYTHON, 0, -4))));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -66,6 +68,8 @@ public class ModItems {
     entries.add(KAKTUS_DAGGER);
     entries.addAfter(Items.WOODEN_SWORD, JAVASCRIPT_SWORD);
     entries.addAfter(Items.LEATHER_BOOTS, JAVASCRIPT_HELMET, JAVASCRIPT_CHESTPLATE, JAVASCRIPT_LEGGINGS, JAVASCRIPT_BOOTS);
+
+    entries.addAfter(Items.IRON_SWORD, PYTHON_SWORD);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
