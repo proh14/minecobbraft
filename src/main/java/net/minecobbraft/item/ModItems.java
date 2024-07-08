@@ -37,13 +37,13 @@ public class ModItems {
   public static final Item JAVASCRIPT_SWORD = registerItem("javascript_sword", new SwordItem(ModToolMaterial.JAVASCRIPT,
           new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVASCRIPT, 0, 1))));
 
-  public static final Item JAVASCIPRT_HELMET = registerItem("javascript_helmet", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
+  public static final Item JAVASCRIPT_HELMET = registerItem("javascript_helmet", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.HELMET,
           new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCIPRT_CHESTPLATE = registerItem("javascript_chestplate", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.CHESTPLATE,
+  public static final Item JAVASCRIPT_CHESTPLATE = registerItem("javascript_chestplate", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.CHESTPLATE,
           new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCIPRT_LEGGINGS = registerItem("javascript_leggings", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.LEGGINGS,
+  public static final Item JAVASCRIPT_LEGGINGS = registerItem("javascript_leggings", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.LEGGINGS,
           new Item.Settings().maxDamage(1)));
-  public static final Item JAVASCIPRT_BOOTS = registerItem("javascript_boots", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.BOOTS,
+  public static final Item JAVASCRIPT_BOOTS = registerItem("javascript_boots", new ArmorItem(ModArmorMaterials.JAVASCRIPT, ArmorItem.Type.BOOTS,
           new Item.Settings().maxDamage(1)));
 
 
@@ -55,6 +55,7 @@ public class ModItems {
     entries.add(WAND_OF_PROH);
     entries.add(KAKTUS_DAGGER);
     entries.addAfter(Items.WOODEN_SWORD, JAVASCRIPT_SWORD);
+    entries.addAfter(Items.LEATHER_BOOTS, JAVASCRIPT_HELMET, JAVASCRIPT_CHESTPLATE, JAVASCRIPT_LEGGINGS, JAVASCRIPT_BOOTS);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
