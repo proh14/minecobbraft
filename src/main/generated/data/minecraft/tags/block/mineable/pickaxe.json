@@ -1,6 +1,8 @@
 {
   "values": [
     "minecobbraft:javascript_ore",
-    "minecobbraft:therock"
+    "minecobbraft:therock",
+    "minecobbraft:python_ore",
+    "minecobbraft:deepslate_python_ore"
   ]
 }

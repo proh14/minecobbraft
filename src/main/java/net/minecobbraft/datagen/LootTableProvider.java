@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.item.ModItems;
 import net.minecraft.registry.RegistryWrapper;
-
 import java.util.concurrent.CompletableFuture;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
@@ -16,7 +15,8 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
   @Override
   public void generate() {
     addDrop(ModBlocks.JAVASCRIPT_ORE, oreDrops(ModBlocks.JAVASCRIPT_ORE, ModItems.JAVASCRIPT));
+    addDrop(ModBlocks.PYTHON_ORE, oreDrops(ModBlocks.PYTHON_ORE, ModItems.PYTHON));
+    addDrop(ModBlocks.DEEPSLATE_PYTHON_ORE, oreDrops(ModBlocks.DEEPSLATE_PYTHON_ORE, ModItems.PYTHON));
     addDrop(ModBlocks.THEROCK);
   }
-
 }
