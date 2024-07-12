@@ -26,8 +26,8 @@ public class ModBlocks {
     new ExperienceDroppingBlock(UniformIntProvider.create(1, 4), Block.Settings.copy(Blocks.IRON_ORE)));
   public static final Block DEEPSLATE_PYTHON_ORE = registerBlock("deepslate_python_ore",
     new ExperienceDroppingBlock(UniformIntProvider.create(2, 6), Block.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
-  public static final Block RUST_ROSE = registerBlock("rust_rose", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, Block.Settings.copy(Blocks.POPPY).nonOpaque().noCollision())); 
-  public static final Block POTTED_RUST_ROSE = registerBlock("potted_rust_rose", new FlowerPotBlock(Blocks.POPPY, Block.Settings.copy(Blocks.POPPY).nonOpaque()));
+  public static final Block RUST_ROSE = registerBlock("rust_rose", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, Block.Settings.copy(Blocks.POPPY).noCollision())); 
+  public static final Block POTTED_RUST_ROSE = registerBlock("potted_rust_rose", new FlowerPotBlock(Blocks.POPPY, Block.Settings.copy(Blocks.POPPY)));
 
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);
