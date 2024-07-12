@@ -3,7 +3,6 @@ package net.minecobbraft.item;
 import net.minecobbraft.Minecobbraft;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,13 +24,22 @@ public class ModArmorMaterials {
     map.put(ArmorItem.Type.HELMET, 1);
     map.put(ArmorItem.Type.BODY, 1);
   }), 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.JAVASCRIPT), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"javascript"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"javascript"), "", false)));
+
   public static final RegistryEntry<ArmorMaterial> PYTHON = ModArmorMaterials.register("python", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
-    map.put(ArmorItem.Type.BOOTS, 64);
-    map.put(ArmorItem.Type.LEGGINGS, 128);
-    map.put(ArmorItem.Type.CHESTPLATE, 256);
-    map.put(ArmorItem.Type.HELMET, 128);
-    map.put(ArmorItem.Type.BODY, 128);
-  }), 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.5f, () -> Ingredient.ofItems(ModItems.PYTHON), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "python"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"python"), "", false)));
+    map.put(ArmorItem.Type.BOOTS, 4);
+    map.put(ArmorItem.Type.LEGGINGS, 5);
+    map.put(ArmorItem.Type.CHESTPLATE, 6);
+    map.put(ArmorItem.Type.HELMET, 5);
+    map.put(ArmorItem.Type.BODY, 5);
+  }), 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.5f, 0.025f, () -> Ingredient.ofItems(ModItems.PYTHON), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "python"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"python"), "", false)));
+
+  public static final RegistryEntry<ArmorMaterial> JAVA = ModArmorMaterials.register("java", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    map.put(ArmorItem.Type.BOOTS, 5);
+    map.put(ArmorItem.Type.LEGGINGS, 6);
+    map.put(ArmorItem.Type.CHESTPLATE, 7);
+    map.put(ArmorItem.Type.HELMET, 5);
+    map.put(ArmorItem.Type.BODY, 5);
+  }), 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, 0.04f, () -> Ingredient.ofItems(ModItems.JAVA), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "java"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "java"), "", false)));
 
 
   private static RegistryEntry<ArmorMaterial> register(String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {

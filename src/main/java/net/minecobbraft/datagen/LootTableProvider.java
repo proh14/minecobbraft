@@ -18,5 +18,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
     addDrop(ModBlocks.PYTHON_ORE, oreDrops(ModBlocks.PYTHON_ORE, ModItems.PYTHON));
     addDrop(ModBlocks.DEEPSLATE_PYTHON_ORE, oreDrops(ModBlocks.DEEPSLATE_PYTHON_ORE, ModItems.PYTHON));
     addDrop(ModBlocks.THEROCK);
+    addDrop(ModBlocks.JAVA_ORE, oreDrops(ModBlocks.JAVA_ORE, ModItems.JAVA));
+    addDrop(ModBlocks.DEEPSLATE_JAVA_ORE, oreDrops(ModBlocks.DEEPSLATE_JAVA_ORE, ModItems.JAVA));
   }
 }

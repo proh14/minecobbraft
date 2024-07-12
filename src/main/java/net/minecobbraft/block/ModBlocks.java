@@ -21,6 +21,9 @@ public class ModBlocks {
   public static final Block PYTHON_ORE = registerBlock("python_ore", new ExperienceDroppingBlock(UniformIntProvider.create(1, 4), Block.Settings.copy(Blocks.IRON_ORE)));
   public static final Block DEEPSLATE_PYTHON_ORE = registerBlock("deepslate_python_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 6), Block.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
 
+  public static final Block JAVA_ORE = registerBlock("java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), Block.Settings.copy(Blocks.DIAMOND_ORE)));
+  public static final Block DEEPSLATE_JAVA_ORE = registerBlock("deepslate_java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 10), Block.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);
     return Registry.register(Registries.BLOCK, Identifier.of(Minecobbraft.MOD_ID, name), block);
