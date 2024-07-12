@@ -20,6 +20,8 @@ public class ModelProvider extends FabricModelProvider {
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PYTHON_ORE);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_PYTHON_ORE);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THEROCK);
+
+    blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RUST_ROSE, ModBlocks.POTTED_RUST_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
   }
 
   @Override

@@ -90,6 +90,8 @@ public class ModItems {
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Blocks.COAL_ORE, ModBlocks.JAVASCRIPT_ORE);
     entries.addAfter(Blocks.IRON_ORE, ModBlocks.PYTHON_ORE, ModBlocks.DEEPSLATE_PYTHON_ORE);
+
+    entries.addAfter(Blocks.POPPY, ModBlocks.RUST_ROSE);
   }
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
