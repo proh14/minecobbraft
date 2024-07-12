@@ -32,5 +32,10 @@
   "item.minecobbraft.python_pickaxe": "Python Pickaxe",
   "item.minecobbraft.python_shovel": "Python Shovel",
   "item.minecobbraft.python_hoe": "Python Hoe",
-  "item.minecobbraft.python_sword": "Python Sword"
+  "item.minecobbraft.python_sword": "Python Sword",
+
+  "item.minecobbraft.python_helmet": "Python Helmet",
+  "item.minecobbraft.python_chestplate": "Python Chestplate",
+  "item.minecobbraft.python_leggings": "Python Leggings",
+  "item.minecobbraft.python_boots": "Python Boots"
 }

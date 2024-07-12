@@ -12,7 +12,6 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-
 import java.util.EnumMap;
 import java.util.List;
 import java.util.function.Supplier;
@@ -26,6 +25,14 @@ public class ModArmorMaterials {
     map.put(ArmorItem.Type.HELMET, 1);
     map.put(ArmorItem.Type.BODY, 1);
   }), 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.JAVASCRIPT), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"javascript"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"javascript"), "", false)));
+  public static final RegistryEntry<ArmorMaterial> PYTHON = ModArmorMaterials.register("python", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    map.put(ArmorItem.Type.BOOTS, 64);
+    map.put(ArmorItem.Type.LEGGINGS, 128);
+    map.put(ArmorItem.Type.CHESTPLATE, 256);
+    map.put(ArmorItem.Type.HELMET, 128);
+    map.put(ArmorItem.Type.BODY, 128);
+  }), 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.0f, 0.5f, () -> Ingredient.ofItems(ModItems.PYTHON), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "python"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID,"python"), "", false)));
+
 
   private static RegistryEntry<ArmorMaterial> register(String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
     List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(Identifier.ofVanilla(id)));

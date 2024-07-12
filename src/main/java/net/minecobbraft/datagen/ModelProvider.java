@@ -47,5 +47,10 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.register(ModItems.PYTHON_SHOVEL, Models.HANDHELD);
     itemModelGenerator.register(ModItems.PYTHON_HOE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.PYTHON_SWORD, Models.HANDHELD);
+
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_HELMET);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_CHESTPLATE);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_LEGGINGS);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_BOOTS);
   }
 }
