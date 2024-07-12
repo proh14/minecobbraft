@@ -72,6 +72,8 @@ public class ModItems {
     new ArmorItem(ModArmorMaterials.PYTHON, ArmorItem.Type.BOOTS,
       new Item.Settings().maxDamage(128)));
 
+  public static final Item JAVA = registerItem("java", new Item(new Item.Settings()));
+
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -99,7 +101,7 @@ public class ModItems {
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.GOLD_NUGGET, JAVASCRIPT);
-    entries.addAfter(Items.IRON_INGOT, PYTHON);
+    entries.addAfter(Items.IRON_INGOT, PYTHON, JAVA);
   }
 
   public static void registerAllItems() {

@@ -37,5 +37,7 @@
   "item.minecobbraft.python_helmet": "Python Helmet",
   "item.minecobbraft.python_chestplate": "Python Chestplate",
   "item.minecobbraft.python_leggings": "Python Leggings",
-  "item.minecobbraft.python_boots": "Python Boots"
+  "item.minecobbraft.python_boots": "Python Boots",
+
+  "item.minecobbraft.java": "Java"
 }

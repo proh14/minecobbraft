@@ -52,5 +52,7 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_CHESTPLATE);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_LEGGINGS);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.PYTHON_BOOTS);
+
+    itemModelGenerator.register(ModItems.JAVA, Models.GENERATED);
   }
 }
