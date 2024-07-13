@@ -61,16 +61,41 @@ public class ModItems {
 
   public static final Item PYTHON_HELMET = registerItem("python_helmet",
     new ArmorItem(ModArmorMaterials.PYTHON, ArmorItem.Type.HELMET,
-      new Item.Settings().maxDamage(64)));
+      new Item.Settings().maxDamage(World.LOW_MEDIUM_DURABILITY)));
   public static final Item PYTHON_CHESTPLATE = registerItem("python_chestplate",
     new ArmorItem(ModArmorMaterials.PYTHON, ArmorItem.Type.CHESTPLATE,
-      new Item.Settings().maxDamage(128)));
+      new Item.Settings().maxDamage(World.LOW_MEDIUM_DURABILITY)));
   public static final Item PYTHON_LEGGINGS = registerItem("python_leggings",
     new ArmorItem(ModArmorMaterials.PYTHON, ArmorItem.Type.LEGGINGS,
-      new Item.Settings().maxDamage(128)));
+      new Item.Settings().maxDamage(World.LOW_MEDIUM_DURABILITY)));
   public static final Item PYTHON_BOOTS = registerItem("python_boots",
     new ArmorItem(ModArmorMaterials.PYTHON, ArmorItem.Type.BOOTS,
-      new Item.Settings().maxDamage(128)));
+      new Item.Settings()));
+
+  public static final Item JAVA = registerItem("java", new Item(new Item.Settings()));
+  public static final Item JAVA_PICKAXE = registerItem("java_pickaxe", new PickaxeItem(ModToolMaterial.JAVA, 
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.JAVA, 0, 0))));
+  public static final Item JAVA_AXE = registerItem("java_axe", new AxeItem(ModToolMaterial.JAVA,
+    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.JAVA, 0, 0))));
+  public static final Item JAVA_SHOVEL = registerItem("java_shovel", new ShovelItem(ModToolMaterial.JAVA,
+    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.JAVA, 0, 0))));
+  public static final Item JAVA_HOE = registerItem("java_hoe", new HoeItem(ModToolMaterial.JAVA,
+    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.JAVA, 0, 0))));
+  public static final Item JAVA_SWORD = registerItem("java_sword", new SwordItem(ModToolMaterial.JAVA,
+    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.JAVA, 0, 0))));
+
+  public static final Item JAVA_HELMET = registerItem("java_helmet",
+    new ArmorItem(ModArmorMaterials.JAVA, ArmorItem.Type.HELMET,
+      new Item.Settings().maxDamage(World.MEDIUM_DURABILITY)));
+  public static final Item JAVA_CHESTPLATE = registerItem("java_chestplate",
+    new ArmorItem(ModArmorMaterials.JAVA, ArmorItem.Type.CHESTPLATE,
+      new Item.Settings().maxDamage(World.MEDIUM_DURABILITY)));
+  public static final Item JAVA_LEGGINGS = registerItem("java_leggings",
+    new ArmorItem(ModArmorMaterials.JAVA, ArmorItem.Type.LEGGINGS,
+      new Item.Settings().maxDamage(World.MEDIUM_DURABILITY)));
+  public static final Item JAVA_BOOTS = registerItem("java_boots",
+    new ArmorItem(ModArmorMaterials.JAVA, ArmorItem.Type.BOOTS,
+      new Item.Settings().maxDamage(World.MEDIUM_DURABILITY)));
 
 
   private static Item registerItem(String name, Item item) {
@@ -85,23 +110,27 @@ public class ModItems {
 
     entries.addAfter(Items.IRON_SWORD, PYTHON_SWORD);
     entries.addAfter(Items.IRON_BOOTS, PYTHON_HELMET, PYTHON_CHESTPLATE, PYTHON_LEGGINGS, PYTHON_BOOTS);
+
+    entries.addAfter(Items.DIAMOND_SWORD, JAVA_SWORD);
+    entries.addAfter(Items.DIAMOND_BOOTS, JAVA_HELMET, JAVA_CHESTPLATE, JAVA_LEGGINGS, JAVA_BOOTS);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Blocks.COAL_ORE, ModBlocks.JAVASCRIPT_ORE);
     entries.addAfter(Blocks.IRON_ORE, ModBlocks.PYTHON_ORE, ModBlocks.DEEPSLATE_PYTHON_ORE);
-
+    entries.addAfter(Blocks.DIAMOND_ORE, ModBlocks.JAVA_ORE, ModBlocks.DEEPSLATE_JAVA_ORE);
     entries.addAfter(Blocks.POPPY, ModBlocks.RUST_ROSE);
   }
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
     entries.addAfter(Items.IRON_HOE, PYTHON_SHOVEL, PYTHON_PICKAXE, PYTHON_AXE, PYTHON_HOE);
+    entries.addAfter(Items.DIAMOND_HOE, JAVA_SHOVEL, JAVA_PICKAXE, JAVA_AXE, JAVA_HOE);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.GOLD_NUGGET, JAVASCRIPT);
-    entries.addAfter(Items.IRON_INGOT, PYTHON);
+    entries.addAfter(Items.IRON_INGOT, PYTHON, JAVA);
   }
 
   public static void registerAllItems() {

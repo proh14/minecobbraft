@@ -38,5 +38,20 @@
   "item.minecobbraft.python_helmet": "Python Helmet",
   "item.minecobbraft.python_chestplate": "Python Chestplate",
   "item.minecobbraft.python_leggings": "Python Leggings",
-  "item.minecobbraft.python_boots": "Python Boots"
+  "item.minecobbraft.python_boots": "Python Boots",
+
+  "item.minecobbraft.java": "Java",
+  "block.minecobbraft.java_ore": "Java Ore",
+  "block.minecobbraft.deepslate_java_ore": "Deepslate Java Ore",
+  
+  "item.minecobbraft.java_axe": "Java Axe",
+  "item.minecobbraft.java_pickaxe": "Java Pickaxe",
+  "item.minecobbraft.java_shovel": "Java Shovel",
+  "item.minecobbraft.java_hoe": "Java Hoe",
+  "item.minecobbraft.java_sword": "Java Sword",
+
+  "item.minecobbraft.java_helmet": "Java Helmet",
+  "item.minecobbraft.java_chestplate": "Java Chestplate",
+  "item.minecobbraft.java_leggings": "Java Leggings",
+  "item.minecobbraft.java_boots": "Java Boots"
 }

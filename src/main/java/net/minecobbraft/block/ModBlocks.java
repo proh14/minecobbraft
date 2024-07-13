@@ -29,6 +29,9 @@ public class ModBlocks {
   public static final Block RUST_ROSE = registerBlock("rust_rose", new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 5, Block.Settings.copy(Blocks.POPPY).noCollision())); 
   public static final Block POTTED_RUST_ROSE = registerBlock("potted_rust_rose", new FlowerPotBlock(Blocks.POPPY, Block.Settings.copy(Blocks.POPPY)));
 
+  public static final Block JAVA_ORE = registerBlock("java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), Block.Settings.copy(Blocks.DIAMOND_ORE)));
+  public static final Block DEEPSLATE_JAVA_ORE = registerBlock("deepslate_java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 10), Block.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);
     return Registry.register(Registries.BLOCK, Identifier.of(Minecobbraft.MOD_ID, name), block);
