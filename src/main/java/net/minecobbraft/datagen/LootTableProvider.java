@@ -20,5 +20,7 @@ public class LootTableProvider extends FabricBlockLootTableProvider {
     addDrop(ModBlocks.THEROCK);
     addDrop(ModBlocks.JAVA_ORE, oreDrops(ModBlocks.JAVA_ORE, ModItems.JAVA));
     addDrop(ModBlocks.DEEPSLATE_JAVA_ORE, oreDrops(ModBlocks.DEEPSLATE_JAVA_ORE, ModItems.JAVA));
+    addDrop(ModBlocks.RUST_ROSE);
+    addPottedPlantDrops(ModBlocks.POTTED_RUST_ROSE);
   }
 }
