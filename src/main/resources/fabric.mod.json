@@ -19,6 +19,9 @@
 		"main": [
 			"net.minecobbraft.Minecobbraft"
 		],
+    "client": [
+      "net.minecobbraft.MinecobbraftClient"
+    ],
 		"fabric-datagen": [
 			"net.minecobbraft.DataGenerator"
 		]
