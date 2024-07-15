@@ -22,6 +22,7 @@ public class ModelProvider extends FabricModelProvider {
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THEROCK);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JAVA_ORE);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_JAVA_ORE);
+    blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RUST_ROSE, ModBlocks.POTTED_RUST_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
   }
 
   @Override
