@@ -2,10 +2,11 @@ package net.minecobbraft;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecobbraft.datagen.BlockTagProvider;
-import net.minecobbraft.datagen.LootTableProvider;
-import net.minecobbraft.datagen.ModRecipeProvider;
-import net.minecobbraft.datagen.ModelProvider;
+import net.minecobbraft.datagen.*;
+import net.minecobbraft.world.ModConfiguredFeatures;
+import net.minecobbraft.world.ModPlacedFeatures;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class DataGenerator implements DataGeneratorEntrypoint {
   @Override
@@ -16,5 +17,12 @@ public class DataGenerator implements DataGeneratorEntrypoint {
     pack.addProvider(BlockTagProvider::new);
     pack.addProvider(LootTableProvider::new);
     pack.addProvider(ModRecipeProvider::new);
+    pack.addProvider(ModWorldGenerator::new);
+  }
+
+  @Override
+  public void buildRegistry(RegistryBuilder registryBuilder) {
+    registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
+    registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
   }
 }

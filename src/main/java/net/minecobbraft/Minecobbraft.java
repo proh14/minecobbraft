@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.item.ModItems;
 import net.minecobbraft.sound.ModSounds;
+import net.minecobbraft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +14,9 @@ public class Minecobbraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerAllItems();
+		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModSounds.registerSounds();;
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

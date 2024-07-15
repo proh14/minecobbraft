@@ -133,7 +133,7 @@ public class ModItems {
     entries.addAfter(Items.IRON_INGOT, PYTHON, JAVA);
   }
 
-  public static void registerAllItems() {
+  public static void registerModItems() {
     Minecobbraft.LOGGER.info("Registering all Items for " + Minecobbraft.MOD_ID);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
