@@ -1,6 +1,5 @@
 package net.minecobbraft.world;
 
-import net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Configure;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
 import net.minecraft.block.Blocks;
@@ -32,13 +31,13 @@ public class ModConfiguredFeatures {
     RuleTest endReplacables = new BlockMatchRuleTest(Blocks.END_STONE);
 
     List<OreFeatureConfig.Target> overworldJavascriptOres =
-      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVASCRIPT_ORE.getDefaultState()));
+            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVASCRIPT_ORE.getDefaultState()));
     List<OreFeatureConfig.Target> overworldJavaOres =
-      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVA_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_JAVA_ORE.getDefaultState()));
+            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVA_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_JAVA_ORE.getDefaultState()));
     List<OreFeatureConfig.Target> overworldPythonOres =
-      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.PYTHON_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_PYTHON_ORE.getDefaultState()));
+            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.PYTHON_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_PYTHON_ORE.getDefaultState()));
     List<OreFeatureConfig.Target> overworldCOres =
-      List.of(OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_C_ORE.getDefaultState()));
+            List.of(OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_C_ORE.getDefaultState()));
 
     register(context, JAVASCRIPT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJavascriptOres, 20));
     register(context, PYTHON_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPythonOres, 10));

@@ -9,8 +9,8 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
 
-public class ModelProvider extends FabricModelProvider {
-  public ModelProvider(FabricDataOutput output) {
+public class ModModelProvider extends FabricModelProvider {
+  public ModModelProvider(FabricDataOutput output) {
     super(output);
   }
 
@@ -68,7 +68,7 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_CHESTPLATE);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_LEGGINGS);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_BOOTS);
-    
+
     itemModelGenerator.register(ModItems.C, Models.GENERATED);
     itemModelGenerator.register(ModItems.C_AXE, Models.HANDHELD);
     itemModelGenerator.register(ModItems.C_PICKAXE, Models.HANDHELD);
@@ -80,5 +80,7 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.registerArmor((ArmorItem) ModItems.C_CHESTPLATE);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.C_LEGGINGS);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.C_BOOTS);
+
+    itemModelGenerator.register(ModItems.MUSIC_DISC_FUR_ELISE, Models.HANDHELD);
   }
 }

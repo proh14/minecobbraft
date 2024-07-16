@@ -1,40 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "minecobbraft",
-	"version": "${version}",
-	"name": "Minecobbraft",
-	"description": "Minecobbraft is a Minecraft mod which injects the chaotic and GOAT energy of CobbCoding streamer memes into your world!",
-	"authors": [
-		"proh14",
-		"DetectiveKaktus"
-	],
-	"contact": {
-		"homepage": "https://github.com/proh14/minecobbraft",
-		"sources": "https://github.com/proh14/minecobbraft"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/minecobbraft/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.minecobbraft.Minecobbraft"
-		],
+  "schemaVersion": 1,
+  "id": "minecobbraft",
+  "version": "${version}",
+  "name": "Minecobbraft",
+  "description": "Minecobbraft is a Minecraft mod which injects the chaotic and GOAT energy of CobbCoding streamer memes into your world!",
+  "authors": [
+    "proh14",
+    "DetectiveKaktus"
+  ],
+  "contact": {
+    "homepage": "https://github.com/proh14/minecobbraft",
+    "sources": "https://github.com/proh14/minecobbraft"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/minecobbraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.minecobbraft.Minecobbraft"
+    ],
     "client": [
       "net.minecobbraft.MinecobbraftClient"
     ],
-		"fabric-datagen": [
-			"net.minecobbraft.DataGenerator"
-		]
-	},
-	"mixins": [
-	],
-	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"sodium": "*"
-	}
+    "fabric-datagen": [
+      "net.minecobbraft.DataGenerator"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "sodium": "*"
+  }
 }

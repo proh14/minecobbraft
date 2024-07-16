@@ -10,11 +10,9 @@ import net.minecraft.util.Identifier;
 public class ModSounds {
   public static final SoundEvent THEROCK_ALL = registerSoundEvent("vine_boom");
 
-
   public static final BlockSoundGroup THEROCK_SOUNDS = new BlockSoundGroup(1f, 1f,
           ModSounds.THEROCK_ALL, ModSounds.THEROCK_ALL, ModSounds.THEROCK_ALL,
           ModSounds.THEROCK_ALL, ModSounds.THEROCK_ALL);
-
 
   private static SoundEvent registerSoundEvent(String name) {
     Identifier id = Identifier.of(Minecobbraft.MOD_ID, name);

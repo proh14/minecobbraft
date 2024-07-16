@@ -4,5 +4,13 @@
     "sounds": [
       "minecobbraft:vine_boom"
     ]
+  },
+  "fur_elise": {
+    "sounds": [
+      {
+        "name": "minecobbraft:fur_elise",
+        "stream": true
+      }
+    ]
   }
 }

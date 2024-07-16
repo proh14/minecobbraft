@@ -9,10 +9,11 @@ import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+
 import java.util.List;
 
 public class WandOfProhItem extends Item {
-  public WandOfProhItem(Settings settings){
+  public WandOfProhItem(Settings settings) {
     super(settings);
   }
 
@@ -21,7 +22,7 @@ public class WandOfProhItem extends Item {
     if (user.getItemCooldownManager().isCoolingDown(this)) return ActionResult.FAIL;
 
     stack.damage(1, user, EquipmentSlot.MAINHAND);
-    entity.setVelocity(entity.getVelocity().add(0,5,0));
+    entity.setVelocity(entity.getVelocity().add(0, 5, 0));
     return ActionResult.success(true);
   }
 

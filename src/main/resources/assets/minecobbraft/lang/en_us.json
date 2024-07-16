@@ -2,70 +2,58 @@
   "block.minecobbraft.rust_rose": "Rust Rose",
   "item.minecobbraft.wand_of_proh": "Wand of proh",
   "item.minecobbraft.wand_of_proh.tooltip": "yeet?!",
-
   "item.minecobbraft.kaktus_dagger": "Kaktus Dagger",
   "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
-
   "item.minecobbraft.javascript": "Javascript",
   "item.minecobbraft.javascript.tooltip": "Useless invention of humanity.",
   "block.minecobbraft.javascript_ore": "Javascript Ore",
-
   "item.minecobbraft.javascript_axe": "Javascript Axe",
   "item.minecobbraft.javascript_sword": "Javascript Sword",
   "item.minecobbraft.javascript_pickaxe": "Javascript Pickaxe",
   "item.minecobbraft.javascript_hoe": "Javascript Hoe",
   "item.minecobbraft.javascript_shovel": "Javascript Shovel",
-
   "item.minecobbraft.javascript_helmet": "Javascript Helmet",
   "item.minecobbraft.javascript_chestplate": "Javascript Chestplate",
   "item.minecobbraft.javascript_leggings": "Javascript Leggings",
   "item.minecobbraft.javascript_boots": "Javascript Boots",
-
   "block.minecobbraft.therock": "Therock",
   "subtitles.minecobbraft.vine_boom": "Ayo?",
-
   "item.minecobbraft.python": "Python",
   "item.minecobbraft.python.tooltip": "Useful tool but too slow.",
   "block.minecobbraft.python_ore": "Python Ore",
   "block.minecobbraft.deepslate_python_ore": "Deepslate Python Ore",
-
   "item.minecobbraft.python_axe": "Python Axe",
   "item.minecobbraft.python_pickaxe": "Python Pickaxe",
   "item.minecobbraft.python_shovel": "Python Shovel",
   "item.minecobbraft.python_hoe": "Python Hoe",
   "item.minecobbraft.python_sword": "Python Sword",
-
   "item.minecobbraft.python_helmet": "Python Helmet",
   "item.minecobbraft.python_chestplate": "Python Chestplate",
   "item.minecobbraft.python_leggings": "Python Leggings",
   "item.minecobbraft.python_boots": "Python Boots",
-
   "item.minecobbraft.java": "Java",
   "block.minecobbraft.java_ore": "Java Ore",
   "block.minecobbraft.deepslate_java_ore": "Deepslate Java Ore",
-  
   "item.minecobbraft.java_axe": "Java Axe",
   "item.minecobbraft.java_pickaxe": "Java Pickaxe",
   "item.minecobbraft.java_shovel": "Java Shovel",
   "item.minecobbraft.java_hoe": "Java Hoe",
   "item.minecobbraft.java_sword": "Java Sword",
-
   "item.minecobbraft.java_helmet": "Java Helmet",
   "item.minecobbraft.java_chestplate": "Java Chestplate",
   "item.minecobbraft.java_leggings": "Java Leggings",
   "item.minecobbraft.java_boots": "Java Boots",
-
   "item.minecobbraft.c": "C",
   "block.minecobbraft.deepslate_c_ore": "Deepslate C Ore",
-  
   "item.minecobbraft.c_axe": "C Axe",
   "item.minecobbraft.c_pickaxe": "C Pickaxe",
   "item.minecobbraft.c_shovel": "C Shovel",
   "item.minecobbraft.c_hoe": "C Hoe",
   "item.minecobbraft.c_sword": "C Sword",
-
   "item.minecobbraft.c_helmet": "C Helmet",
   "item.minecobbraft.c_chestplate": "C Chestplate",
   "item.minecobbraft.c_leggings": "C Leggings",
-  "item.minecobbraft.c_boots": "C Boots"
+  "item.minecobbraft.c_boots": "C Boots",
+  "item.minecobbraft.music_disc_fur_elise": "Music Disc",
+  "item.minecobbraft.music_disc_fur_elise.desc": "Beethoven - Für Elise"
 }

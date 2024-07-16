@@ -1,0 +1,10 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.minecobbraft.music_disc_fur_elise.desc"
+  },
+  "length_in_seconds": 184,
+  "sound_event": {
+    "sound_id": "minecobbraft:fur_elise"
+  }
+}

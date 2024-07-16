@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.item.ModItems;
 import net.minecraft.registry.RegistryWrapper;
+
 import java.util.concurrent.CompletableFuture;
 
 public class LootTableProvider extends FabricBlockLootTableProvider {
