@@ -13,5 +13,7 @@ public class ModOreGeneration {
             GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.JAVA_ORE_PLACED_KEY);
     BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
             GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.PYTHON_ORE_PLACED_KEY);
+    BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+            GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.C_ORE_PLACED_KEY);
   }
 }
