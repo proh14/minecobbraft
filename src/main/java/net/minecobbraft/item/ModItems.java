@@ -97,6 +97,30 @@ public class ModItems {
     new ArmorItem(ModArmorMaterials.JAVA, ArmorItem.Type.BOOTS,
       new Item.Settings().maxDamage(World.MEDIUM_DURABILITY)));
 
+  public static final Item C = registerItem("c", new Item(new Item.Settings()));
+  public static final Item C_PICKAXE = registerItem("c_pickaxe", new PickaxeItem(ModToolMaterial.C, 
+    new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.C, 0, 0))));
+  public static final Item C_AXE = registerItem("c_axe", new AxeItem(ModToolMaterial.C,
+    new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.C, 0, 0))));
+  public static final Item C_SHOVEL = registerItem("c_shovel", new ShovelItem(ModToolMaterial.C,
+    new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.C, 0, 0))));
+  public static final Item C_HOE = registerItem("c_hoe", new HoeItem(ModToolMaterial.C,
+    new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.C, 0, 0))));
+  public static final Item C_SWORD = registerItem("c_sword", new SwordItem(ModToolMaterial.C,
+    new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.C, 0, 0))));
+
+  public static final Item C_HELMET = registerItem("c_helmet",
+    new ArmorItem(ModArmorMaterials.C, ArmorItem.Type.HELMET,
+      new Item.Settings().maxDamage(World.HIGH_DURABILITY)));
+  public static final Item C_CHESTPLATE = registerItem("c_chestplate",
+    new ArmorItem(ModArmorMaterials.C, ArmorItem.Type.CHESTPLATE,
+      new Item.Settings().maxDamage(World.HIGH_DURABILITY)));
+  public static final Item C_LEGGINGS = registerItem("c_leggings",
+    new ArmorItem(ModArmorMaterials.C, ArmorItem.Type.LEGGINGS,
+      new Item.Settings().maxDamage(World.HIGH_DURABILITY)));
+  public static final Item C_BOOTS = registerItem("c_boots",
+    new ArmorItem(ModArmorMaterials.C, ArmorItem.Type.BOOTS,
+      new Item.Settings().maxDamage(World.HIGH_DURABILITY)));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -111,8 +135,8 @@ public class ModItems {
     entries.addAfter(Items.IRON_SWORD, PYTHON_SWORD);
     entries.addAfter(Items.IRON_BOOTS, PYTHON_HELMET, PYTHON_CHESTPLATE, PYTHON_LEGGINGS, PYTHON_BOOTS);
 
-    entries.addAfter(Items.DIAMOND_SWORD, JAVA_SWORD);
-    entries.addAfter(Items.DIAMOND_BOOTS, JAVA_HELMET, JAVA_CHESTPLATE, JAVA_LEGGINGS, JAVA_BOOTS);
+    entries.addAfter(Items.DIAMOND_SWORD, JAVA_SWORD, C_SWORD);
+    entries.addAfter(Items.DIAMOND_BOOTS, JAVA_HELMET, JAVA_CHESTPLATE, JAVA_LEGGINGS, JAVA_BOOTS, C_HELMET, C_CHESTPLATE, C_LEGGINGS, C_BOOTS);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
@@ -120,17 +144,19 @@ public class ModItems {
     entries.addAfter(Blocks.IRON_ORE, ModBlocks.PYTHON_ORE, ModBlocks.DEEPSLATE_PYTHON_ORE);
     entries.addAfter(Blocks.DIAMOND_ORE, ModBlocks.JAVA_ORE, ModBlocks.DEEPSLATE_JAVA_ORE);
     entries.addAfter(Blocks.POPPY, ModBlocks.RUST_ROSE);
+    entries.addAfter(Items.DEEPSLATE_DIAMOND_ORE, ModBlocks.DEEPSLATE_C_ORE);
   }
 
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
     entries.addAfter(Items.IRON_HOE, PYTHON_SHOVEL, PYTHON_PICKAXE, PYTHON_AXE, PYTHON_HOE);
-    entries.addAfter(Items.DIAMOND_HOE, JAVA_SHOVEL, JAVA_PICKAXE, JAVA_AXE, JAVA_HOE);
+    entries.addAfter(Items.DIAMOND_HOE, JAVA_SHOVEL, JAVA_PICKAXE, JAVA_AXE, JAVA_HOE, C_SHOVEL, C_PICKAXE, C_AXE, C_HOE);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.GOLD_NUGGET, JAVASCRIPT);
     entries.addAfter(Items.IRON_INGOT, PYTHON, JAVA);
+    entries.addAfter(Items.DIAMOND, C);
   }
 
   public static void registerModItems() {

@@ -41,6 +41,13 @@ public class ModArmorMaterials {
     map.put(ArmorItem.Type.BODY, 5);
   }), 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0f, 0.04f, () -> Ingredient.ofItems(ModItems.JAVA), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "java"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "java"), "", false)));
 
+  public static final RegistryEntry<ArmorMaterial> C = ModArmorMaterials.register("c", Util.make(new EnumMap(ArmorItem.Type.class), map -> {
+    map.put(ArmorItem.Type.BOOTS, 6);
+    map.put(ArmorItem.Type.LEGGINGS, 7);
+    map.put(ArmorItem.Type.CHESTPLATE, 8);
+    map.put(ArmorItem.Type.HELMET, 6);
+    map.put(ArmorItem.Type.BODY, 6);
+  }), 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.5f, 0.06f, () -> Ingredient.ofItems(ModItems.C), List.of(new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "c"), "", false), new ArmorMaterial.Layer(Identifier.of(Minecobbraft.MOD_ID, "c"), "", false)));
 
   private static RegistryEntry<ArmorMaterial> register(String id, EnumMap<ArmorItem.Type, Integer> defense, int enchantability, RegistryEntry<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
     List<ArmorMaterial.Layer> list = List.of(new ArmorMaterial.Layer(Identifier.ofVanilla(id)));

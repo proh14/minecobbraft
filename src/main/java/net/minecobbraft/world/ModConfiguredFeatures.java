@@ -1,5 +1,6 @@
 package net.minecobbraft.world;
 
+import net.fabricmc.fabric.api.networking.v1.ServerConfigurationConnectionEvents.Configure;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
 import net.minecraft.block.Blocks;
@@ -22,6 +23,7 @@ public class ModConfiguredFeatures {
   public static final RegistryKey<ConfiguredFeature<?, ?>> JAVASCRIPT_ORE_KEY = registerKey("javascript_ore");
   public static final RegistryKey<ConfiguredFeature<?, ?>> JAVA_ORE_KEY = registerKey("java_ore");
   public static final RegistryKey<ConfiguredFeature<?, ?>> PYTHON_ORE_KEY = registerKey("python_ore");
+  public static final RegistryKey<ConfiguredFeature<?, ?>> C_ORE_KEY = registerKey("c_ore");
 
   public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
     RuleTest stoneReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -30,16 +32,18 @@ public class ModConfiguredFeatures {
     RuleTest endReplacables = new BlockMatchRuleTest(Blocks.END_STONE);
 
     List<OreFeatureConfig.Target> overworldJavascriptOres =
-            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVASCRIPT_ORE.getDefaultState()));
+      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVASCRIPT_ORE.getDefaultState()));
     List<OreFeatureConfig.Target> overworldJavaOres =
-            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVA_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_JAVA_ORE.getDefaultState()));
+      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.JAVA_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_JAVA_ORE.getDefaultState()));
     List<OreFeatureConfig.Target> overworldPythonOres =
-            List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.PYTHON_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_PYTHON_ORE.getDefaultState()));
-
+      List.of(OreFeatureConfig.createTarget(stoneReplacables, ModBlocks.PYTHON_ORE.getDefaultState()), OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_PYTHON_ORE.getDefaultState()));
+    List<OreFeatureConfig.Target> overworldCOres =
+      List.of(OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.DEEPSLATE_C_ORE.getDefaultState()));
 
     register(context, JAVASCRIPT_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJavascriptOres, 20));
-    register(context, JAVA_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJavaOres, 10));
     register(context, PYTHON_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldPythonOres, 10));
+    register(context, JAVA_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldJavaOres, 10));
+    register(context, C_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldCOres, 10));
   }
 
   public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -22,6 +22,7 @@ public class ModelProvider extends FabricModelProvider {
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.THEROCK);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.JAVA_ORE);
     blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_JAVA_ORE);
+    blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_C_ORE);
     blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.RUST_ROSE, ModBlocks.POTTED_RUST_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
   }
 
@@ -67,5 +68,17 @@ public class ModelProvider extends FabricModelProvider {
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_CHESTPLATE);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_LEGGINGS);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.JAVA_BOOTS);
+    
+    itemModelGenerator.register(ModItems.C, Models.GENERATED);
+    itemModelGenerator.register(ModItems.C_AXE, Models.HANDHELD);
+    itemModelGenerator.register(ModItems.C_PICKAXE, Models.HANDHELD);
+    itemModelGenerator.register(ModItems.C_SHOVEL, Models.HANDHELD);
+    itemModelGenerator.register(ModItems.C_HOE, Models.HANDHELD);
+    itemModelGenerator.register(ModItems.C_SWORD, Models.HANDHELD);
+
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.C_HELMET);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.C_CHESTPLATE);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.C_LEGGINGS);
+    itemModelGenerator.registerArmor((ArmorItem) ModItems.C_BOOTS);
   }
 }

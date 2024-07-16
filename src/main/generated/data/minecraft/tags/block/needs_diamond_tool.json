@@ -1,6 +1,7 @@
 {
   "values": [
     "minecobbraft:java_ore",
-    "minecobbraft:deepslate_java_ore"
+    "minecobbraft:deepslate_java_ore",
+    "minecobbraft:deepslate_c_ore"
   ]
 }

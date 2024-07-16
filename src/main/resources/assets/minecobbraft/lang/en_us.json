@@ -53,5 +53,19 @@
   "item.minecobbraft.java_helmet": "Java Helmet",
   "item.minecobbraft.java_chestplate": "Java Chestplate",
   "item.minecobbraft.java_leggings": "Java Leggings",
-  "item.minecobbraft.java_boots": "Java Boots"
+  "item.minecobbraft.java_boots": "Java Boots",
+
+  "item.minecobbraft.c": "C",
+  "block.minecobbraft.deepslate_c_ore": "Deepslate C Ore",
+  
+  "item.minecobbraft.c_axe": "C Axe",
+  "item.minecobbraft.c_pickaxe": "C Pickaxe",
+  "item.minecobbraft.c_shovel": "C Shovel",
+  "item.minecobbraft.c_hoe": "C Hoe",
+  "item.minecobbraft.c_sword": "C Sword",
+
+  "item.minecobbraft.c_helmet": "C Helmet",
+  "item.minecobbraft.c_chestplate": "C Chestplate",
+  "item.minecobbraft.c_leggings": "C Leggings",
+  "item.minecobbraft.c_boots": "C Boots"
 }

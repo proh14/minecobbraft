@@ -27,6 +27,7 @@ public class BlockTagProvider extends FabricTagProvider.BlockTagProvider {
       .add(ModBlocks.DEEPSLATE_PYTHON_ORE);
     getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
       .add(ModBlocks.JAVA_ORE)
-      .add(ModBlocks.DEEPSLATE_JAVA_ORE);
+      .add(ModBlocks.DEEPSLATE_JAVA_ORE)
+      .add(ModBlocks.DEEPSLATE_C_ORE);
   }
 }

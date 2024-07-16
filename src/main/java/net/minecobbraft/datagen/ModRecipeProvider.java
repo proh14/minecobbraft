@@ -4,27 +4,22 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecobbraft.item.ModItems;
 import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
-
 import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-
-
   public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
     super(output, registriesFuture);
   }
 
   @Override
   public void generate(RecipeExporter exporter) {
-
     final ArrayList<Item> ITEMS = new ArrayList<Item>();
 
     ITEMS.add(ModItems.JAVASCRIPT_SWORD);
@@ -63,6 +58,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     toolAndArmorSetFor(exporter, ModItems.JAVA, ITEMS);
     ITEMS.clear();
 
+    ITEMS.add(ModItems.C_SWORD);
+    ITEMS.add(ModItems.C_PICKAXE);
+    ITEMS.add(ModItems.C_AXE);
+    ITEMS.add(ModItems.C_SHOVEL);
+    ITEMS.add(ModItems.C_HOE);
+    ITEMS.add(ModItems.C_HELMET);
+    ITEMS.add(ModItems.C_CHESTPLATE);
+    ITEMS.add(ModItems.C_LEGGINGS);
+    ITEMS.add(ModItems.C_BOOTS);
+    toolAndArmorSetFor(exporter, ModItems.C, ITEMS);
+    ITEMS.clear();
   }
 
   private void toolAndArmorSetFor(RecipeExporter exporter, Item item, ArrayList<Item> res) {
