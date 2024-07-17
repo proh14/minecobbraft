@@ -1,6 +1,6 @@
 package net.minecobbraft.utils;
 
-public final class World {
+public final class ModWorld {
   public static final int SECOND = 20;
 
   public static final int HIGH_DURABILITY = 2 << 10;

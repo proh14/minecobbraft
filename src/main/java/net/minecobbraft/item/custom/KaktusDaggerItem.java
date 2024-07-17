@@ -1,6 +1,6 @@
 package net.minecobbraft.item.custom;
 
-import net.minecobbraft.utils.World;
+import net.minecobbraft.utils.ModWorld;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -18,7 +18,6 @@ public class KaktusDaggerItem extends SwordItem {
     super(toolMaterial, settings);
   }
 
-
   @Override
   public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
     tooltip.add(Text.translatable("item.minecobbraft.kaktus_dagger.tooltip"));
@@ -27,7 +26,7 @@ public class KaktusDaggerItem extends SwordItem {
   @Override
   public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
     stack.damage(1, attacker, EquipmentSlot.MAINHAND);
-    target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * World.SECOND), attacker);
+    target.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 5 * ModWorld.SECOND), attacker);
     return false;
   }
 }

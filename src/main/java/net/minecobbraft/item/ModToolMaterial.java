@@ -1,6 +1,6 @@
 package net.minecobbraft.item;
 
-import net.minecobbraft.utils.World;
+import net.minecobbraft.utils.ModWorld;
 import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -11,9 +11,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
   JAVASCRIPT(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 1, 1, 0, 0, () -> Ingredient.ofItems(ModItems.JAVASCRIPT)),
-  PYTHON(BlockTags.INCORRECT_FOR_IRON_TOOL, World.LOW_MEDIUM_DURABILITY, 2.0f, 3.5f, 10, () -> Ingredient.ofItems(ModItems.PYTHON)),
-  JAVA(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, World.MEDIUM_DURABILITY, 2.5f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.JAVA)),
-  C(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, World.HIGH_DURABILITY, 4.0f, 7.0f, 20, () -> Ingredient.ofItems(ModItems.C));
+  PYTHON(BlockTags.INCORRECT_FOR_IRON_TOOL, ModWorld.LOW_MEDIUM_DURABILITY, 2.0f, 3.5f, 10, () -> Ingredient.ofItems(ModItems.PYTHON)),
+  JAVA(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, ModWorld.MEDIUM_DURABILITY, 2.5f, 5.0f, 15, () -> Ingredient.ofItems(ModItems.JAVA)),
+  C(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, ModWorld.HIGH_DURABILITY, 4.0f, 7.0f, 20, () -> Ingredient.ofItems(ModItems.C));
 
   private final TagKey<Block> inverseTag;
   private final int itemDurability;
