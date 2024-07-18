@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_python": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:python_helmet"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:python_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_python"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:python_helmet"
+    ]
+  }
+}
