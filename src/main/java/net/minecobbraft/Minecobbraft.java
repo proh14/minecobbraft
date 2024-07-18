@@ -1,7 +1,10 @@
 package net.minecobbraft;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecobbraft.block.ModBlocks;
+import net.minecobbraft.entity.ModEntities;
+import net.minecobbraft.entity.custom.RustCrabEntity;
 import net.minecobbraft.item.ModItems;
 import net.minecobbraft.sound.ModSounds;
 import net.minecobbraft.world.gen.ModWorldGeneration;
@@ -17,7 +20,7 @@ public class Minecobbraft implements ModInitializer {
     ModItems.registerModItems();
     ModBlocks.registerModBlocks();
     ModSounds.registerSounds();
-    ;
     ModWorldGeneration.generateModWorldGen();
+    FabricDefaultAttributeRegistry.register(ModEntities.RUST_CRAB, RustCrabEntity.createRustCrabAttributes());
   }
 }

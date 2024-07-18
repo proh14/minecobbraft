@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
+import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.item.custom.KaktusDaggerItem;
 import net.minecobbraft.item.custom.MallocItem;
 import net.minecobbraft.item.custom.WandOfProhItem;
@@ -129,7 +130,11 @@ public class ModItems {
     .maxCount(1)
     .maxDamage(ModWorld.LOW_MEDIUM_DURABILITY)));
 
-  public static final Item MUSIC_DISC_FUR_ELISE = registerItem("music_disc_fur_elise", new Item(new Item.Settings().rarity(Rarity.RARE).maxCount(1).jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(Minecobbraft.MOD_ID, "music_disc_fur_elise_sounds")))));
+  public static final Item MUSIC_DISC_FUR_ELISE = registerItem("music_disc_fur_elise",
+   new Item(new Item.Settings()
+    .rarity(Rarity.RARE)
+    .maxCount(1).
+    jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(Minecobbraft.MOD_ID, "music_disc_fur_elise_sounds")))));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
