@@ -57,17 +57,17 @@ public class RustCrabEntity extends AnimalEntity {
     return MobEntity.createMobAttributes()
       .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
       .add(EntityAttributes.GENERIC_ARMOR, 5.0f)
-      .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15f)
+      .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.07f)
       .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0f);
   }
 
   @Override
   protected void initGoals() {
     this.goalSelector.add(0, new SwimGoal(this));
-    this.goalSelector.add(1, new AnimalMateGoal(this, 1.150));
-    this.goalSelector.add(2, new TemptGoal(this, 2, Ingredient.ofItems(Items.SEA_PICKLE), false));
-    this.goalSelector.add(3, new WanderAroundFarGoal(this, 10));
-    this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 10f));
+    this.goalSelector.add(1, new AnimalMateGoal(this, 1.15));
+    this.goalSelector.add(2, new TemptGoal(this, 1.15, Ingredient.ofItems(Items.SEA_PICKLE), false));
+    this.goalSelector.add(3, new WanderAroundFarGoal(this, 1));
+    this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 1));
     this.goalSelector.add(5, new LookAroundGoal(this));
   }
 
