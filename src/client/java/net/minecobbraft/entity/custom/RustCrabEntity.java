@@ -37,9 +37,7 @@ public class RustCrabEntity extends AnimalEntity {
   @Override
   public void tick() {
     super.tick();
-    if (this.getWorld().isClient()) {
-      updateAnimation();
-    }
+    if (this.getWorld().isClient()) updateAnimation();
   }
 
   @Override

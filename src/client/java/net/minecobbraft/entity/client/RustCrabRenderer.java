@@ -12,7 +12,7 @@ public class RustCrabRenderer extends MobEntityRenderer<RustCrabEntity, RustCrab
   private static final Identifier TEXTURE = Identifier.of(Minecobbraft.MOD_ID, "textures/entity/rust_crab.png");
 
   public RustCrabRenderer(EntityRendererFactory.Context context) {
-    super(context, new RustCrabModel<>(context.getPart(ModModelLayers.RUST_CRAB)), 0.7f);
+    super(context, new RustCrabModel<>(context.getPart(ModModelLayers.RUST_CRAB)), 0.4f);
   }
 
   @Override

@@ -20,17 +20,17 @@ public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityMod
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData main = modelPartData.addChild("main", ModelPartBuilder.create().uv(20, 17).cuboid(-2.0F, -1.0F, -5.0F, 5.0F, 1.0F, 10.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 20.75F, 0.0F));
+		ModelPartData main = modelPartData.addChild("main", ModelPartBuilder.create().uv(20, 17).cuboid(-2.0F, -1.0F, -5.0F, 5.0F, 1.0F, 10.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 20.75F, 1.0F, 0.0F, 1.5708F, 0.0F));
 
 		ModelPartData head = main.addChild("head", ModelPartBuilder.create().uv(0, 16).cuboid(-2.0F, -5.75F, -5.0F, 5.0F, 1.0F, 10.0F, new Dilation(0.0F))
-						.uv(26, 0).cuboid(-1.0F, -6.75F, -3.0F, 3.0F, 1.0F, 6.0F, new Dilation(0.0F))
-						.uv(6, 6).cuboid(3.5F, -3.75F, -2.25F, 1.0F, 2.0F, 2.0F, new Dilation(0.0F))
-						.uv(6, 2).cuboid(3.5F, -3.75F, 0.25F, 1.0F, 2.0F, 2.0F, new Dilation(0.0F))
-						.uv(0, 0).cuboid(-3.0F, -4.75F, -6.0F, 7.0F, 4.0F, 12.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+			.uv(26, 0).cuboid(-1.0F, -6.75F, -3.0F, 3.0F, 1.0F, 6.0F, new Dilation(0.0F))
+			.uv(6, 6).cuboid(3.5F, -3.75F, -2.25F, 1.0F, 2.0F, 2.0F, new Dilation(0.0F))
+			.uv(6, 2).cuboid(3.5F, -3.75F, 0.25F, 1.0F, 2.0F, 2.0F, new Dilation(0.0F))
+			.uv(0, 0).cuboid(-3.0F, -4.75F, -6.0F, 7.0F, 4.0F, 12.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
 		ModelPartData spikes = head.addChild("spikes", ModelPartBuilder.create().uv(26, 4).cuboid(0.0F, -9.5F, -0.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
-						.uv(24, 24).cuboid(0.0F, -9.5F, 1.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
-						.uv(20, 24).cuboid(0.0F, -9.5F, -2.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 2.0F, 0.0F));
+			.uv(24, 24).cuboid(0.0F, -9.5F, 1.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F))
+			.uv(20, 24).cuboid(0.0F, -9.5F, -2.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 2.0F, 0.0F));
 
 		ModelPartData cube_r1 = spikes.addChild("cube_r1", ModelPartBuilder.create().uv(6, 20).cuboid(-1.0F, -1.0F, -1.0F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(1.0F, -7.0F, -4.5F, 0.829F, 0.0F, 0.0F));
 
@@ -96,8 +96,8 @@ public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityMod
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 		this.setHeadAngles(netHeadYaw, headPitch);
 
-		this.animateMovement(ModAnimations.RUST_CRAB_WALK, limbSwingAmount, 2.5f, 2, 2);
-		this.updateAnimation(entity.idle, ModAnimations.RUST_CRAB_IDLE, ageInTicks, 1f);
+		this.animateMovement(ModAnimations.RUST_CRAB_WALK, limbSwingAmount, 1, 1, 1);
+		this.updateAnimation(entity.idle, ModAnimations.RUST_CRAB_IDLE, ageInTicks, 1);
 	}
 
 	private void setHeadAngles(float headYaw, float headPitch) {
