@@ -13,7 +13,7 @@ public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityMod
 	private final ModelPart head;
 
 	public RustCrabModel(ModelPart root) {
-		this.rustCrab = root.getChild("main");
+		this.rustCrab = root;
 		this.head = rustCrab.getChild("main").getChild("head");
 	}
 

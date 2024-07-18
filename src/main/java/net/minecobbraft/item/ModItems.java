@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
-import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.item.custom.KaktusDaggerItem;
 import net.minecobbraft.item.custom.MallocItem;
 import net.minecobbraft.item.custom.WandOfProhItem;
