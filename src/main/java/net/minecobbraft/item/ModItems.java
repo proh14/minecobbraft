@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.item.custom.KaktusDaggerItem;
-import net.minecobbraft.item.custom.MallocItem;
+import net.minecobbraft.item.custom.HeapItem;
 import net.minecobbraft.item.custom.WandOfProhItem;
 import net.minecobbraft.utils.ModWorld;
 import net.minecraft.block.Blocks;
@@ -125,7 +125,7 @@ public class ModItems {
   public static final Item C_BOOTS = registerItem("c_boots",
     new ArmorItem(ModArmorMaterials.C, ArmorItem.Type.BOOTS,
       new Item.Settings().maxDamage(ModWorld.HIGH_DURABILITY)));
-  public static final Item MALLOC = registerItem("malloc", new MallocItem(new Item.Settings()
+  public static final Item HEAP = registerItem("heap", new HeapItem(new Item.Settings()
     .maxCount(1)
     .maxDamage(ModWorld.LOW_MEDIUM_DURABILITY)));
 
@@ -159,7 +159,7 @@ public class ModItems {
   private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
     entries.addAfter(Items.WOODEN_HOE, JAVASCRIPT_SHOVEL, JAVASCRIPT_PICKAXE, JAVASCRIPT_AXE, JAVASCRIPT_HOE);
     entries.addAfter(Items.IRON_HOE, PYTHON_SHOVEL, PYTHON_PICKAXE, PYTHON_AXE, PYTHON_HOE);
-    entries.addAfter(Items.DIAMOND_HOE, JAVA_SHOVEL, JAVA_PICKAXE, JAVA_AXE, JAVA_HOE, C_SHOVEL, C_PICKAXE, C_AXE, C_HOE, MALLOC);
+    entries.addAfter(Items.DIAMOND_HOE, JAVA_SHOVEL, JAVA_PICKAXE, JAVA_AXE, JAVA_HOE, C_SHOVEL, C_PICKAXE, C_AXE, C_HOE, HEAP);
   }
 
   private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {

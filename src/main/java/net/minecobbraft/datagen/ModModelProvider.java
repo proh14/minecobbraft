@@ -81,7 +81,7 @@ public class ModModelProvider extends FabricModelProvider {
     itemModelGenerator.registerArmor((ArmorItem) ModItems.C_LEGGINGS);
     itemModelGenerator.registerArmor((ArmorItem) ModItems.C_BOOTS);
 
-    itemModelGenerator.register(ModItems.MALLOC, Models.GENERATED);
+    itemModelGenerator.register(ModItems.HEAP, Models.GENERATED);
 
     itemModelGenerator.register(ModItems.MUSIC_DISC_FUR_ELISE, Models.HANDHELD);
   }
