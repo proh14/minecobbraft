@@ -1,4 +1,4 @@
-package net.minecobbraft.entity.client;
+package net.minecobbraft.entity;
 
 import net.minecobbraft.Minecobbraft;
 import net.minecraft.client.render.entity.model.EntityModelLayer;

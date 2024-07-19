@@ -1,6 +1,8 @@
-package net.minecobbraft.entity.client;
+package net.minecobbraft.entity.renderer;
 
 import net.minecobbraft.Minecobbraft;
+import net.minecobbraft.entity.ModModelLayers;
+import net.minecobbraft.entity.model.RustCrabModel;
 import net.minecobbraft.entity.custom.RustCrabEntity;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.EntityRendererFactory;

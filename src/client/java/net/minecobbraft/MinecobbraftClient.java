@@ -7,9 +7,9 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.entity.ModEntities;
-import net.minecobbraft.entity.client.ModModelLayers;
-import net.minecobbraft.entity.client.RustCrabModel;
-import net.minecobbraft.entity.client.RustCrabRenderer;
+import net.minecobbraft.entity.ModModelLayers;
+import net.minecobbraft.entity.model.RustCrabModel;
+import net.minecobbraft.entity.renderer.RustCrabRenderer;
 import net.minecobbraft.entity.custom.RustCrabEntity;
 import net.minecraft.client.render.RenderLayer;
 
@@ -21,6 +21,5 @@ public class MinecobbraftClient implements ClientModInitializer {
     EntityModelLayerRegistry.registerModelLayer(ModModelLayers.RUST_CRAB, RustCrabModel::getTexturedModelData);
     EntityRendererRegistry.register(ModEntities.RUST_CRAB, RustCrabRenderer::new);
 
-    FabricDefaultAttributeRegistry.register(ModEntities.RUST_CRAB, RustCrabEntity.createRustCrabAttributes());
   }
 }

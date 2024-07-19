@@ -1,4 +1,4 @@
-package net.minecobbraft.entity.client;
+package net.minecobbraft.entity.model;
 
 import net.minecobbraft.entity.animation.ModAnimations;
 import net.minecobbraft.entity.custom.RustCrabEntity;
