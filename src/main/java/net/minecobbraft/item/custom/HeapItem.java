@@ -9,8 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.text.PlainTextContent;
-import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
@@ -29,9 +27,6 @@ public class HeapItem extends Item {
 
   @Override
   public boolean onClicked(ItemStack stack, ItemStack otherStack, Slot slot, ClickType clickType, PlayerEntity player, StackReference cursorStackReference) {
-    if(player.getWorld().isClient){
-      return true;
-    }
     uses--;
     Text text = Text.literal("free'd 5 hearts from the heap.").formatted(Formatting.BOLD).formatted(Formatting.GREEN);
     player.sendMessage(text);
@@ -41,8 +36,7 @@ public class HeapItem extends Item {
       player.getWorld().createExplosion(player, player.getX(), player.getY(), player.getZ(), 0.1f, World.ExplosionSourceType.TRIGGER);
       player.kill();
     }
-    cursorStackReference.set(stack);
-    return true;
+    return false;
   }
 
 
