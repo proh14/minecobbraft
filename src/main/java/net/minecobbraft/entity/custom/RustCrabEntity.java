@@ -1,9 +1,11 @@
 package net.minecobbraft.entity.custom;
 
 import net.minecobbraft.entity.ModEntities;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -16,7 +18,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 public class RustCrabEntity extends AnimalEntity {
   public final AnimationState idle = new AnimationState();
@@ -30,8 +35,7 @@ public class RustCrabEntity extends AnimalEntity {
     if (this.idleAnimationTimeout <= 0) {
       this.idleAnimationTimeout = this.random.nextInt(40) + 80;
       this.idle.start(this.age);
-    }
-    else
+    } else
       --this.idleAnimationTimeout;
   }
 
@@ -54,10 +58,10 @@ public class RustCrabEntity extends AnimalEntity {
 
   public static DefaultAttributeContainer.Builder createRustCrabAttributes() {
     return MobEntity.createMobAttributes()
-      .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
-      .add(EntityAttributes.GENERIC_ARMOR, 5.0f)
-      .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.27f)
-      .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0f);
+            .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
+            .add(EntityAttributes.GENERIC_ARMOR, 5.0f)
+            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.27f)
+            .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0f);
   }
 
   @Override

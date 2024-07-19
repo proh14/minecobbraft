@@ -1,6 +1,5 @@
 package net.minecobbraft.item.custom;
 
-import java.util.List;
 import net.minecobbraft.utils.ModWorld;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,9 +7,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
-import net.minecraft.world.World;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
+
+import java.util.List;
 
 public class MallocItem extends Item {
   private int usesInLastMinute = 0;
