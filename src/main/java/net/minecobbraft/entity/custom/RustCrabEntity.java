@@ -1,27 +1,19 @@
 package net.minecobbraft.entity.custom;
 
 import net.minecobbraft.entity.ModEntities;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.AnimationState;
-import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SpawnReason;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
-import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 
 public class RustCrabEntity extends AnimalEntity {
   public final AnimationState idle = new AnimationState();
@@ -78,5 +70,10 @@ public class RustCrabEntity extends AnimalEntity {
   @Override
   public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
     return ModEntities.RUST_CRAB.create(world);
+  }
+
+  @Override
+  public boolean canBeLeashed() {
+    return true;
   }
 }
