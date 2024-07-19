@@ -94,9 +94,9 @@ public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityMod
 	@Override
 	public void setAngles(RustCrabEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
-		this.setHeadAngles(netHeadYaw, headPitch);
+		//this.setHeadAngles(netHeadYaw, headPitch);
 
-		this.animateMovement(ModAnimations.RUST_CRAB_WALK, limbSwingAmount, 1, 1, 1);
+		this.animateMovement(ModAnimations.RUST_CRAB_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.updateAnimation(entity.idle, ModAnimations.RUST_CRAB_IDLE, ageInTicks, 1);
 	}
 

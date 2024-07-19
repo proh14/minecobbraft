@@ -10,8 +10,10 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+
+
 public class ModEntities {
   public static final EntityType<RustCrabEntity> RUST_CRAB = Registry.register(Registries.ENTITY_TYPE,
     Identifier.of(Minecobbraft.MOD_ID, "rust_crab"),
-    FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RustCrabEntity::new).dimensions(EntityDimensions.fixed(1f, 1f)).build());
+    EntityType.Builder.create(RustCrabEntity::new, SpawnGroup.CREATURE).dimensions(1f,1f).build());
 }
