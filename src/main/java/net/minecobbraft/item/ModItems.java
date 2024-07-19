@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecobbraft.Minecobbraft;
 import net.minecobbraft.block.ModBlocks;
+import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.item.custom.KaktusDaggerItem;
 import net.minecobbraft.item.custom.MallocItem;
 import net.minecobbraft.item.custom.WandOfProhItem;
@@ -135,6 +136,10 @@ public class ModItems {
     .maxCount(1).
     jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(Minecobbraft.MOD_ID, "music_disc_fur_elise_sounds")))));
 
+  public static final Item RUST_CRAB_SPAWN_EGG = registerItem("rust_crab_spawn_egg", new SpawnEggItem(ModEntities.RUST_CRAB, 0xFFFFFF, 0xFF8C00, new Item.Settings()));
+
+
+
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
   }
@@ -150,6 +155,10 @@ public class ModItems {
 
     entries.addAfter(Items.DIAMOND_SWORD, JAVA_SWORD, C_SWORD);
     entries.addAfter(Items.DIAMOND_BOOTS, JAVA_HELMET, JAVA_CHESTPLATE, JAVA_LEGGINGS, JAVA_BOOTS, C_HELMET, C_CHESTPLATE, C_LEGGINGS, C_BOOTS);
+  }
+
+  private static void addItemsToSpawnEggGroup(FabricItemGroupEntries entries){
+    entries.addAfter(Items.CREEPER_SPAWN_EGG, ModItems.RUST_CRAB_SPAWN_EGG);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
