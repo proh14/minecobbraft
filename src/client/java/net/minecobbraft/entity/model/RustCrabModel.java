@@ -6,7 +6,6 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.MathHelper;
 
 public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityModel<T> {
   private final ModelPart rustCrab;
@@ -94,15 +93,9 @@ public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityMod
   @Override
   public void setAngles(RustCrabEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     this.getPart().traverse().forEach(ModelPart::resetTransform);
-    //this.setHeadAngles(netHeadYaw, headPitch);
 
     this.animateMovement(ModAnimations.RUST_CRAB_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
     this.updateAnimation(entity.idle, ModAnimations.RUST_CRAB_IDLE, ageInTicks, 1);
-  }
-
-  private void setHeadAngles(float headYaw, float headPitch) {
-    this.head.yaw = MathHelper.clamp(headYaw, -30.0f, 30.0f) * 0.017453292f;
-    this.head.pitch = MathHelper.clamp(headPitch, -25.0f, 45.0f) * 0.017453292f;
   }
 
   @Override

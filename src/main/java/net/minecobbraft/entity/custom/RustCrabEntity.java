@@ -50,10 +50,10 @@ public class RustCrabEntity extends AnimalEntity {
 
   public static DefaultAttributeContainer.Builder createRustCrabAttributes() {
     return MobEntity.createMobAttributes()
-            .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
-            .add(EntityAttributes.GENERIC_ARMOR, 5.0f)
-            .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.27f)
-            .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0f);
+      .add(EntityAttributes.GENERIC_MAX_HEALTH, 10)
+      .add(EntityAttributes.GENERIC_ARMOR, 5.0f)
+      .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.27f)
+      .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0f);
   }
 
   @Override
