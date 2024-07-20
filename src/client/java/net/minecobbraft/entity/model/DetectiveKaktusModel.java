@@ -39,7 +39,7 @@ public class DetectiveKaktusModel<T extends DetectiveKaktusEntity> extends Singl
   @Override
   public void setAngles(DetectiveKaktusEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
     this.getPart().traverse().forEach(ModelPart::resetTransform);
-    this.animateMovement(ModAnimations.DETECTIVEKAKTUS_WALK, limbSwing, limbSwingAmount, 3f, 3f);
+    this.animateMovement(ModAnimations.DETECTIVEKAKTUS_WALK, limbSwing, limbSwingAmount, 3.5f, 4f);
   }
 
   @Override

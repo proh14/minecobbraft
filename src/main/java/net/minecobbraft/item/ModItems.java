@@ -138,6 +138,8 @@ public class ModItems {
 
   public static final Item RUST_CRAB_SPAWN_EGG = registerItem("rust_crab_spawn_egg",
     new SpawnEggItem(ModEntities.RUST_CRAB, 0xFFFFFF, 0xFF8C00, new Item.Settings()));
+  public static final Item DETECTIVEKAKTUS_SPAWN_EGG = registerItem("detecitvekaktus_spawn_egg",
+    new SpawnEggItem(ModEntities.DETECTIVEKAKTUS, 0x989c7b, 0x43661f, new Item.Settings()));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -157,7 +159,7 @@ public class ModItems {
   }
 
   private static void addItemsToSpawnEggGroup(FabricItemGroupEntries entries) {
-    entries.addAfter(Items.CREEPER_SPAWN_EGG, ModItems.RUST_CRAB_SPAWN_EGG);
+    entries.addAfter(Items.CREEPER_SPAWN_EGG, ModItems.RUST_CRAB_SPAWN_EGG, ModItems.DETECTIVEKAKTUS_SPAWN_EGG);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
