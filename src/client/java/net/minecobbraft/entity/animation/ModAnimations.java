@@ -61,4 +61,31 @@ public class ModAnimations {
     new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
   ))
   .build();
+
+
+  public static final Animation DETECTIVEKAKTUS_WALK = Animation.Builder.create(1.0F).looping()
+    .addBoneAnimation("main", new Transformation(Transformation.Targets.ROTATE,
+      new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 1.5F), Transformation.Interpolations.LINEAR),
+      new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, -1.5F), Transformation.Interpolations.LINEAR),
+      new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 1.5F), Transformation.Interpolations.LINEAR)
+    ))
+    .addBoneAnimation("right_hand", new Transformation(Transformation.Targets.ROTATE,
+      new Keyframe(0.0F, AnimationHelper.createRotationalVector(-2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(0.5F, AnimationHelper.createRotationalVector(2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(1.0F, AnimationHelper.createRotationalVector(-2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
+    ))
+    .addBoneAnimation("left_hand", new Transformation(Transformation.Targets.ROTATE,
+      new Keyframe(0.0F, AnimationHelper.createRotationalVector(2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(0.5F, AnimationHelper.createRotationalVector(-2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(1.0F, AnimationHelper.createRotationalVector(2.0F, 0.0F, 0.0F), Transformation.Interpolations.LINEAR)
+    ))
+    .build();
+
+  public static final Animation DETECTIVEKAKTUS_WAVE = Animation.Builder.create(1.0F).looping()
+    .addBoneAnimation("left_hand", new Transformation(Transformation.Targets.ROTATE,
+      new Keyframe(0.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 8.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(0.5F, AnimationHelper.createRotationalVector(0.0F, 0.0F, -3.0F), Transformation.Interpolations.LINEAR),
+      new Keyframe(1.0F, AnimationHelper.createRotationalVector(0.0F, 0.0F, 8.0F), Transformation.Interpolations.LINEAR)
+    ))
+    .build();
 }

@@ -6,4 +6,5 @@ import net.minecraft.util.Identifier;
 
 public class ModModelLayers {
   public static final EntityModelLayer RUST_CRAB = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "rust_crab"), "main");
+  public static final EntityModelLayer DETECTIVEKAKTUS = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "detectivekaktus"), "main");
 }
