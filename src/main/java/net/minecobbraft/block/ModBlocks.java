@@ -1,6 +1,7 @@
 package net.minecobbraft.block;
 
 import net.minecobbraft.Minecobbraft;
+import net.minecobbraft.block.custom.PianoBlock;
 import net.minecobbraft.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
@@ -27,6 +28,9 @@ public class ModBlocks {
   public static final Block JAVA_ORE = registerBlock("java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), Block.Settings.copy(Blocks.DIAMOND_ORE)));
   public static final Block DEEPSLATE_JAVA_ORE = registerBlock("deepslate_java_ore", new ExperienceDroppingBlock(UniformIntProvider.create(4, 10), Block.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
   public static final Block DEEPSLATE_C_ORE = registerBlock("deepslate_c_ore", new ExperienceDroppingBlock(UniformIntProvider.create(5, 10), Block.Settings.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
+
+  public static final Block PIANO = registerBlock("piano", new PianoBlock(Block.Settings.copy(Blocks.IRON_BLOCK).nonOpaque()));
 
   private static Block registerBlock(String name, Block block) {
     registerBlockItem(name, block);

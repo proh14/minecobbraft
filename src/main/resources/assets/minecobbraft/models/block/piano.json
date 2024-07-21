@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "block/piano_sharps_and_flats",
-		"1": "block/piano_keys",
-		"2": "block/piano_base",
-		"3": "block/piano_pedals",
-		"particle": "block/sharps_and_flats"
+		"0": "minecobbraft:block/piano_sharps_and_flats",
+		"1": "minecobbraft:block/piano_keys",
+		"2": "minecobbraft:block/piano_base",
+		"3": "minecobbraft:block/piano_pedals",
+		"particle": "minecobbraft:block/piano_sharps_and_flats"
 	},
 	"elements": [
 		{
@@ -331,7 +331,7 @@
 	},
 	"groups": [
 		{
-			"name": "pedals",
+			"name": "Pedals",
 			"origin": [10, 3, 17],
 			"color": 0,
 			"children": [0, 1, 2]
