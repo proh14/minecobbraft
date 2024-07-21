@@ -24,8 +24,7 @@ public class RustCrabRenderer extends MobEntityRenderer<RustCrabEntity, RustCrab
 
   @Override
   public void render(RustCrabEntity livingEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-    if (livingEntity.isBaby())
-      matrixStack.scale(0.5f, 0.5f, 0.5f);
+    if (livingEntity.isBaby()) matrixStack.scale(0.5f, 0.5f, 0.5f);
     super.render(livingEntity, f, g, matrixStack, vertexConsumerProvider, i);
   }
 }

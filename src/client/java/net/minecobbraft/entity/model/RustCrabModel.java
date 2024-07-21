@@ -9,11 +9,9 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class RustCrabModel<T extends RustCrabEntity> extends SinglePartEntityModel<T> {
   private final ModelPart rustCrab;
-  private final ModelPart head;
 
   public RustCrabModel(ModelPart root) {
     this.rustCrab = root;
-    this.head = rustCrab.getChild("main").getChild("head");
   }
 
   public static TexturedModelData getTexturedModelData() {

@@ -8,8 +8,10 @@ import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.entity.ModModelLayers;
 import net.minecobbraft.entity.model.DetectiveKaktusModel;
+import net.minecobbraft.entity.model.LocalTexanModel;
 import net.minecobbraft.entity.model.RustCrabModel;
 import net.minecobbraft.entity.renderer.DetectiveKaktusRenderer;
+import net.minecobbraft.entity.renderer.LocalTexanRenderer;
 import net.minecobbraft.entity.renderer.RustCrabRenderer;
 import net.minecraft.client.render.RenderLayer;
 
@@ -18,9 +20,14 @@ public class MinecobbraftClient implements ClientModInitializer {
   public void onInitializeClient() {
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RUST_ROSE, RenderLayer.getCutout());
     BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_RUST_ROSE, RenderLayer.getCutout());
+
     EntityModelLayerRegistry.registerModelLayer(ModModelLayers.RUST_CRAB, RustCrabModel::getTexturedModelData);
     EntityRendererRegistry.register(ModEntities.RUST_CRAB, RustCrabRenderer::new);
+
     EntityModelLayerRegistry.registerModelLayer(ModModelLayers.DETECTIVEKAKTUS, DetectiveKaktusModel::getTexturedModelData);
     EntityRendererRegistry.register(ModEntities.DETECTIVEKAKTUS, DetectiveKaktusRenderer::new);
+
+    EntityModelLayerRegistry.registerModelLayer(ModModelLayers.LOCALTEXAN, LocalTexanModel::getTexturedModelData);
+    EntityRendererRegistry.register(ModEntities.LOCALTEXAN, LocalTexanRenderer::new);
   }
 }
