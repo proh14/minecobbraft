@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "got_fur_elise_disc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:music_disc_fur_elise"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.furelise.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:music_disc_fur_elise"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.furelise.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_fur_elise_disc"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
