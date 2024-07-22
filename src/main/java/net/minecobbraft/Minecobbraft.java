@@ -6,6 +6,7 @@ import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.entity.custom.DetectiveKaktusEntity;
 import net.minecobbraft.entity.custom.LocalTexanEntity;
+import net.minecobbraft.entity.custom.Proh14Entity;
 import net.minecobbraft.entity.custom.RustCrabEntity;
 import net.minecobbraft.item.ModItems;
 import net.minecobbraft.sound.ModSounds;
@@ -29,5 +30,6 @@ public class Minecobbraft implements ModInitializer {
     FabricDefaultAttributeRegistry.register(ModEntities.RUST_CRAB, RustCrabEntity.createRustCrabAttributes());
     FabricDefaultAttributeRegistry.register(ModEntities.DETECTIVEKAKTUS, DetectiveKaktusEntity.createDetectiveKaktusAttributes());
     FabricDefaultAttributeRegistry.register(ModEntities.LOCALTEXAN, LocalTexanEntity.createLocalTexanAttributes());
+    FabricDefaultAttributeRegistry.register(ModEntities.PROH14, Proh14Entity.createProh14Attributes());
   }
 }

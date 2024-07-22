@@ -89,7 +89,7 @@ public class ModAnimations {
     ))
     .build();
 
-  public static final Animation LOCALTEXAN_WALK = Animation.Builder.create(1.5F).looping()
+  public static final Animation HUMANOID_WALK = Animation.Builder.create(1.5F).looping()
     .addBoneAnimation("main", new Transformation(Transformation.Targets.TRANSLATE,
       new Keyframe(0.0F, AnimationHelper.createTranslationalVector(0.0F, 0.4F, 0.0F), Transformation.Interpolations.LINEAR),
       new Keyframe(0.2917F, AnimationHelper.createTranslationalVector(0.0F, 0.1F, 0.0F), Transformation.Interpolations.LINEAR),

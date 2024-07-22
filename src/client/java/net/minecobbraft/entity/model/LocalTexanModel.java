@@ -46,6 +46,6 @@ public class LocalTexanModel<T extends LocalTexanEntity> extends SinglePartEntit
   @Override
   public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) {
     this.getPart().traverse().forEach(ModelPart::resetTransform);
-    this.animateMovement(ModAnimations.LOCALTEXAN_WALK, limbAngle, limbDistance, 2f, 2.5f);
+    this.animateMovement(ModAnimations.HUMANOID_WALK, limbAngle, limbDistance, 2f, 2.5f);
   }
 }

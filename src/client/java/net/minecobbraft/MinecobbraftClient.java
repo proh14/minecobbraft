@@ -9,9 +9,11 @@ import net.minecobbraft.entity.ModEntities;
 import net.minecobbraft.entity.ModModelLayers;
 import net.minecobbraft.entity.model.DetectiveKaktusModel;
 import net.minecobbraft.entity.model.LocalTexanModel;
+import net.minecobbraft.entity.model.Proh14Model;
 import net.minecobbraft.entity.model.RustCrabModel;
 import net.minecobbraft.entity.renderer.DetectiveKaktusRenderer;
 import net.minecobbraft.entity.renderer.LocalTexanRenderer;
+import net.minecobbraft.entity.renderer.Proh14Renderer;
 import net.minecobbraft.entity.renderer.RustCrabRenderer;
 import net.minecraft.client.render.RenderLayer;
 
@@ -29,5 +31,8 @@ public class MinecobbraftClient implements ClientModInitializer {
 
     EntityModelLayerRegistry.registerModelLayer(ModModelLayers.LOCALTEXAN, LocalTexanModel::getTexturedModelData);
     EntityRendererRegistry.register(ModEntities.LOCALTEXAN, LocalTexanRenderer::new);
+
+    EntityModelLayerRegistry.registerModelLayer(ModModelLayers.PROH14, Proh14Model::getTexturedModelData);
+    EntityRendererRegistry.register(ModEntities.PROH14, Proh14Renderer::new);
   }
 }

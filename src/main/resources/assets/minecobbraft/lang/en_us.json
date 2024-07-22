@@ -55,10 +55,11 @@
   "item.minecobbraft.c_leggings": "C Leggings",
   "item.minecobbraft.c_boots": "C Boots",
   "item.minecobbraft.heap": "Heap",
-  "item.minecobbraft.malloc.tooltip": "With great power, comes great responsability",
+  "item.minecobbraft.malloc.tooltip": "With great power, comes great responsibility",
   "item.minecobbraft.music_disc_fur_elise": "Music Disc",
   "item.minecobbraft.music_disc_fur_elise.desc": "Beethoven - Für Elise",
   "item.minecobbraft.rust_crab_spawn_egg": "Rust Crab Spawn Egg",
   "item.minecobbraft.detecitvekaktus_spawn_egg": "DetectiveKaktus Spawn Egg",
-  "item.minecobbraft.localtexan_spawn_egg": "LocalTexan Spawn Egg"
+  "item.minecobbraft.localtexan_spawn_egg": "LocalTexan Spawn Egg",
+  "item.minecobbraft.proh14_spawn_egg": "Proh14 Spawn Egg"
 }
