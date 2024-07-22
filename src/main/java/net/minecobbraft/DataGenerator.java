@@ -14,10 +14,11 @@ public class DataGenerator implements DataGeneratorEntrypoint {
     FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
     pack.addProvider(ModModelProvider::new);
-    pack.addProvider(BlockTagProvider::new);
-    pack.addProvider(LootTableProvider::new);
+    pack.addProvider(ModBlockTagProvider::new);
+    pack.addProvider(ModLootTableProvider::new);
     pack.addProvider(ModRecipeProvider::new);
     pack.addProvider(ModWorldGenerator::new);
+    pack.addProvider(ModAchievementsProvider::new);
   }
 
   @Override

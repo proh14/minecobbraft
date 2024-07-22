@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "got_javascript": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:javascript"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.webdev.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:javascript"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.webdev.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_javascript"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
