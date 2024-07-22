@@ -49,5 +49,20 @@ public class ModAchievementsProvider extends FabricAdvancementProvider {
       .criterion("got_python", InventoryChangedCriterion.Conditions.items(ModItems.PYTHON))
       .parent(webDeveloperAdvancement)
       .build(consumer, Minecobbraft.MOD_ID + "/automationzombie");
+
+      var minecraftDevAdvancement = Advancement.Builder.create()
+        .display(
+          ModItems.JAVA,
+          Text.translatable("advancement.minecobbraft.minecraftdev.title"),
+          Text.translatable("advancement.minecobbraft.minecraft.dev.description"),
+          Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+          AdvancementFrame.TASK,
+          true,
+          true,
+          false
+        )
+        .criterion("got_java", InventoryChangedCriterion.Conditions.items(ModItems.JAVA))
+        .parent(automationZombieAdvancement)
+        .build(consumer, Minecobbraft.MOD_ID + "/minecraftdev");
   }
 }

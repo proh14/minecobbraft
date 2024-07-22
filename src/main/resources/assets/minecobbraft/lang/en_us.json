@@ -76,5 +76,7 @@
   "advancement.minecobbraft.webdev.title": "Web Developer",
   "advancement.minecobbraft.webdev.description": "Get your first piece of JavaScript",
   "advancement.minecobbraft.automationzombie.title": "Automation Zombie",
-  "advancement.minecobbraft.automationzombie.description": "Become Python enjoyer"
+  "advancement.minecobbraft.automationzombie.description": "Become Python enjoyer",
+  "advancement.minecobbraft.minecraftdev.title": "Minecraft Developer",
+  "advancement.minecobbraft.minecraft.dev.description": "Dive into the Java programming language world"
 }
