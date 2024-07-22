@@ -9,4 +9,5 @@ public class ModModelLayers {
   public static final EntityModelLayer DETECTIVEKAKTUS = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "detectivekaktus"), "main");
   public static final EntityModelLayer LOCALTEXAN = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "localtexan"), "main");
   public static final EntityModelLayer PROH14 = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "proh14"), "main");
+  public static final EntityModelLayer TSODING = new EntityModelLayer(Identifier.of(Minecobbraft.MOD_ID, "tsoding"), "main");
 }

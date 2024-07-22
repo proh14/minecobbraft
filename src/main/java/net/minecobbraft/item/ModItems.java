@@ -144,6 +144,8 @@ public class ModItems {
     new SpawnEggItem(ModEntities.LOCALTEXAN, 0x000000, 0xff0000, new Item.Settings()));
   public static final Item PROH14_SPAWN_EGG = registerItem("proh14_spawn_egg",
     new SpawnEggItem(ModEntities.PROH14, 0xaabbaa, 0x00aa00, new Item.Settings()));
+  public static final Item TSODING_SPAWN_EGG = registerItem("tsoding_spawn_egg",
+    new SpawnEggItem(ModEntities.TSODING, 0xaabbaa, 0x000099, new Item.Settings()));
 
   private static Item registerItem(String name, Item item) {
     return Registry.register(Registries.ITEM, Identifier.of(Minecobbraft.MOD_ID, name), item);
@@ -163,7 +165,7 @@ public class ModItems {
   }
 
   private static void addItemsToSpawnEggGroup(FabricItemGroupEntries entries) {
-    entries.addAfter(Items.CREEPER_SPAWN_EGG, RUST_CRAB_SPAWN_EGG, DETECTIVEKAKTUS_SPAWN_EGG, LOCALTEXAN_SPAWN_EGG, PROH14_SPAWN_EGG);
+    entries.addAfter(Items.CREEPER_SPAWN_EGG, RUST_CRAB_SPAWN_EGG, DETECTIVEKAKTUS_SPAWN_EGG, LOCALTEXAN_SPAWN_EGG, PROH14_SPAWN_EGG, TSODING_SPAWN_EGG);
   }
 
   private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
