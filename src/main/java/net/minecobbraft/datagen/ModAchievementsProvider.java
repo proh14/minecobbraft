@@ -3,6 +3,7 @@ package net.minecobbraft.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecobbraft.Minecobbraft;
+import net.minecobbraft.block.ModBlocks;
 import net.minecobbraft.item.ModItems;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
@@ -93,5 +94,19 @@ public class ModAchievementsProvider extends FabricAdvancementProvider {
       )
       .criterion("got_fur_elise_disc", InventoryChangedCriterion.Conditions.items(ModItems.MUSIC_DISC_FUR_ELISE))
       .build(consumer, Minecobbraft.MOD_ID + "/furelise");
+
+    var rustificationAdvancement = Advancement.Builder.create()
+      .display(
+        ModBlocks.RUST_ROSE,
+        Text.translatable("advancement.minecobbraft.rustification.title"),
+        Text.translatable("advancement.minecobbraft.rustification.description"),
+        Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+        AdvancementFrame.TASK,
+        true,
+        true,
+        false
+      )
+      .criterion("got_rust_rose", InventoryChangedCriterion.Conditions.items(ModBlocks.RUST_ROSE))
+      .build(consumer, Minecobbraft.MOD_ID + "/rustification");
   }
 }

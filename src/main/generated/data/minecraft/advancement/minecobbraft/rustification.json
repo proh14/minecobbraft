@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "got_rust_rose": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:rust_rose"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.rustification.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:rust_rose"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.rustification.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_rust_rose"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
