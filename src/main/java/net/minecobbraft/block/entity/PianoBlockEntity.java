@@ -1,22 +1,20 @@
 package net.minecobbraft.block.entity;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
-import net.minecobbraft.item.ModItems;
-import net.minecobbraft.sound.ModSounds;
+import net.minecobbraft.screen.screenHandlers.PianoScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -34,10 +32,6 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
     super(ModBlockEntites.PIANO_BLOCK_ENTITY, pos, state);
   }
 
-  @Override
-  public Object getScreenOpeningData(ServerPlayerEntity player) {
-    return this.pos;
-  }
 
   @Override
   protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
@@ -64,7 +58,7 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
   @Nullable
   @Override
   public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-    return null;
+    return new PianoScreenHandler(syncId, playerInventory, this);
   }
 
   public void tick(World world, BlockPos pos, BlockState state) {
@@ -78,5 +72,16 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
 
     */
 
+  }
+
+  @Override
+  public Object getScreenOpeningData(ServerPlayerEntity player) {
+    return new PianoData(this.pos);
+  }
+
+  @Nullable
+  @Override
+  public Packet<ClientPlayPacketListener> toUpdatePacket() {
+    return BlockEntityUpdateS2CPacket.create(this);
   }
 }

@@ -20,6 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class PianoBlock extends BlockWithEntity implements BlockEntityProvider {
   private static final VoxelShape SHAPE = PianoBlock.createCuboidShape(0,0,0, 16, 12, 13);
+  public static final MapCodec<PianoBlock> CODEC = PianoBlock.createCodec(PianoBlock::new);
 
   public PianoBlock(Settings settings){
     super(settings);
@@ -27,7 +28,7 @@ public class PianoBlock extends BlockWithEntity implements BlockEntityProvider {
 
   @Override
   protected MapCodec<? extends BlockWithEntity> getCodec() {
-    return PianoBlock.createCodec(PianoBlock::new);
+    return CODEC;
   }
 
   @Override
