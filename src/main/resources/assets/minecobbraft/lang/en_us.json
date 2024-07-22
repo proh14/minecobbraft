@@ -74,5 +74,7 @@
   "item.minecobbraft.tsoding_spawn_egg": "Tsoding Spawn Egg",
 
   "advancement.minecobbraft.webdev.title": "Web Developer",
-  "advancement.minecobbraft.webdev.description": "Get your first piece of JavaScript"
+  "advancement.minecobbraft.webdev.description": "Get your first piece of JavaScript",
+  "advancement.minecobbraft.automationzombie.title": "Automation Zombie",
+  "advancement.minecobbraft.automationzombie.description": "Become Python enjoyer"
 }

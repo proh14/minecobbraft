@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:minecobbraft/webdev",
+  "criteria": {
+    "got_python": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:python"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.automationzombie.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:python"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.automationzombie.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_python"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
