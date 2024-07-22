@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class PianoScreen extends HandledScreen<PianoScreenHandler> {
-  private static final Identifier TEXTURE = Identifier.of(Minecobbraft.MOD_ID, "textures/gui/piano_gui");
+  private static final Identifier TEXTURE = Identifier.of(Minecobbraft.MOD_ID, "textures/gui/piano_gui.png");
 
   public PianoScreen(PianoScreenHandler handler, PlayerInventory inventory, Text title) {
     super(handler, inventory, title);

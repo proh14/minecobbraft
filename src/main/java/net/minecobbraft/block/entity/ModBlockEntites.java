@@ -13,4 +13,7 @@ public class ModBlockEntites {
           Registries.BLOCK_ENTITY_TYPE,
           Identifier.of(Minecobbraft.MOD_ID, "piano_be"),
           BlockEntityType.Builder.create(PianoBlockEntity::new, ModBlocks.PIANO).build());
+  public static void registerBlockEntities(){
+    Minecobbraft.LOGGER.info("Registering BlockEntities for " + Minecobbraft.MOD_ID);
+  }
 }

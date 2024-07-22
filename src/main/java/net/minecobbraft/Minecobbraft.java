@@ -2,6 +2,7 @@ package net.minecobbraft;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecobbraft.block.ModBlocks;
+import net.minecobbraft.block.entity.ModBlockEntites;
 import net.minecobbraft.item.ModItems;
 import net.minecobbraft.screen.ModScreenHandlers;
 import net.minecobbraft.sound.ModSounds;
@@ -20,5 +21,6 @@ public class Minecobbraft implements ModInitializer {
     ModSounds.registerSounds();
     ModScreenHandlers.registerScreenHandlers();
     ModWorldGeneration.generateModWorldGen();
+    ModBlockEntites.registerBlockEntities();
   }
 }

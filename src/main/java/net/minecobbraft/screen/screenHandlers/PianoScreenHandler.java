@@ -15,17 +15,19 @@ public class PianoScreenHandler extends ScreenHandler{
   private final Inventory inventory;
   public final PianoBlockEntity pianoBlockEntity;
 
-  public PianoScreenHandler(int syncId, PlayerInventory inventory, PianoData data) {
-    this(syncId, inventory, inventory.player.getWorld().getBlockEntity(data.pos()));
+  public PianoScreenHandler(int syncId, PlayerInventory playerinventory, PianoData data) {
+    this(syncId, playerinventory, playerinventory.player.getWorld().getBlockEntity(data.pos()));
   }
 
   public PianoScreenHandler(int syncId, PlayerInventory inventory, BlockEntity blockEntity){
     super(ModScreenHandlers.PIANO_SCREEN_HANDLER, syncId);
+    checkSize(inventory, 2);
     inventory.onOpen(inventory.player);
     this.pianoBlockEntity = (PianoBlockEntity) blockEntity;
-    this.inventory = inventory;
-    this.addSlot(new Slot(inventory, 0, 85, 15));
-    this.addSlot(new Slot(inventory, 0, 159, 15));
+    this.inventory = (Inventory) blockEntity;
+    this.addSlot(new Slot(this.inventory, 0, 77, 10));
+    this.addSlot(new Slot(this.inventory, 1, 152, 10));
+
 
     addPlayerInventory(inventory);
     addPlayerHotbar(inventory);
@@ -69,6 +71,12 @@ public class PianoScreenHandler extends ScreenHandler{
       }
     }
     return newStack;
+  }
+
+  @Override
+  public void onContentChanged(Inventory inventory) {
+    this.sendContentUpdates();
+    super.onContentChanged(inventory);
   }
 
   @Override

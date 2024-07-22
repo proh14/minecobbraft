@@ -1,6 +1,7 @@
 package net.minecobbraft.block.entity;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.minecobbraft.item.ModItems;
 import net.minecobbraft.screen.screenHandlers.PianoScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -55,6 +56,14 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
     return Text.translatable("block.minecobbraft.piano");
   }
 
+  @Override
+  public void markDirty() {
+    assert world != null;
+    world.updateListeners(pos,getCachedState(),getCachedState(),3);
+    super.markDirty();
+  }
+
+
   @Nullable
   @Override
   public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
@@ -66,11 +75,10 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
       return;
     }
 
-   /* if(!getStack(SHEET_MUSIC_SLOT).isEmpty() && getStack(OUTPUT_DISC_SLOT).isEmpty()){
+   if(!getStack(SHEET_MUSIC_SLOT).isEmpty() && getStack(OUTPUT_DISC_SLOT).isEmpty()){
       this.setStack(OUTPUT_DISC_SLOT, new ItemStack(ModItems.MUSIC_DISC_FUR_ELISE, 1));
+      markDirty();
     }
-
-    */
 
   }
 
@@ -83,5 +91,11 @@ public class PianoBlockEntity extends BlockEntity implements ExtendedScreenHandl
   @Override
   public Packet<ClientPlayPacketListener> toUpdatePacket() {
     return BlockEntityUpdateS2CPacket.create(this);
+  }
+
+
+  @Override
+  public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
+    return createNbt(registryLookup);
   }
 }
