@@ -78,5 +78,7 @@
   "advancement.minecobbraft.automationzombie.title": "Automation Zombie",
   "advancement.minecobbraft.automationzombie.description": "Become Python enjoyer",
   "advancement.minecobbraft.minecraftdev.title": "Minecraft Developer",
-  "advancement.minecobbraft.minecraft.dev.description": "Dive into the Java programming language world"
+  "advancement.minecobbraft.minecraftdev.description": "Dive into the Java programming language world",
+  "advancement.minecobbraft.realprogrammer.title": "Real Programmer",
+  "advancement.minecobbraft.realprogrammer.description": "Enjoy the true power of the C programming language"
 }

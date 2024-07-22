@@ -54,7 +54,7 @@ public class ModAchievementsProvider extends FabricAdvancementProvider {
         .display(
           ModItems.JAVA,
           Text.translatable("advancement.minecobbraft.minecraftdev.title"),
-          Text.translatable("advancement.minecobbraft.minecraft.dev.description"),
+          Text.translatable("advancement.minecobbraft.minecraftdev.description"),
           Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
           AdvancementFrame.TASK,
           true,
@@ -64,5 +64,20 @@ public class ModAchievementsProvider extends FabricAdvancementProvider {
         .criterion("got_java", InventoryChangedCriterion.Conditions.items(ModItems.JAVA))
         .parent(automationZombieAdvancement)
         .build(consumer, Minecobbraft.MOD_ID + "/minecraftdev");
+
+      var realProgrammerAdvancement = Advancement.Builder.create()
+        .display(
+          ModItems.C,
+          Text.translatable("advancement.minecobbraft.realprogrammer.title"),
+          Text.translatable("advancement.minecobbraft.realprogrammer.description"),
+          Identifier.of("textures/gui/advancements/backgrounds/adventure.png"),
+          AdvancementFrame.TASK,
+          true,
+          true,
+          false
+        )
+        .criterion("got_c", InventoryChangedCriterion.Conditions.items(ModItems.C))
+        .parent(minecraftDevAdvancement)
+        .build(consumer, Minecobbraft.MOD_ID + "/realprogrammer");
   }
 }
