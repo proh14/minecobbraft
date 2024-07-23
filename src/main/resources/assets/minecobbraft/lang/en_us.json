@@ -1,9 +1,10 @@
 {
-  "block.minecobbraft.rust_rose": "Rust Rose",
   "item.minecobbraft.wand_of_proh": "Wand of proh",
   "item.minecobbraft.wand_of_proh.tooltip": "yeet?!",
+
   "item.minecobbraft.kaktus_dagger": "Kaktus Dagger",
   "item.minecobbraft.kaktus_dagger.tooltip": "Spiky!",
+
   "item.minecobbraft.javascript": "Javascript",
   "item.minecobbraft.javascript.tooltip": "Useless invention of humanity.",
   "block.minecobbraft.javascript_ore": "Javascript Ore",
@@ -16,8 +17,7 @@
   "item.minecobbraft.javascript_chestplate": "Javascript Chestplate",
   "item.minecobbraft.javascript_leggings": "Javascript Leggings",
   "item.minecobbraft.javascript_boots": "Javascript Boots",
-  "block.minecobbraft.therock": "Therock",
-  "subtitles.minecobbraft.vine_boom": "Ayo?",
+
   "item.minecobbraft.python": "Python",
   "item.minecobbraft.python.tooltip": "Useful tool but too slow.",
   "block.minecobbraft.python_ore": "Python Ore",
@@ -31,6 +31,7 @@
   "item.minecobbraft.python_chestplate": "Python Chestplate",
   "item.minecobbraft.python_leggings": "Python Leggings",
   "item.minecobbraft.python_boots": "Python Boots",
+
   "item.minecobbraft.java": "Java",
   "block.minecobbraft.java_ore": "Java Ore",
   "block.minecobbraft.deepslate_java_ore": "Deepslate Java Ore",
@@ -43,6 +44,7 @@
   "item.minecobbraft.java_chestplate": "Java Chestplate",
   "item.minecobbraft.java_leggings": "Java Leggings",
   "item.minecobbraft.java_boots": "Java Boots",
+
   "item.minecobbraft.c": "C",
   "block.minecobbraft.deepslate_c_ore": "Deepslate C Ore",
   "item.minecobbraft.c_axe": "C Axe",
@@ -55,12 +57,32 @@
   "item.minecobbraft.c_leggings": "C Leggings",
   "item.minecobbraft.c_boots": "C Boots",
   "item.minecobbraft.heap": "Heap",
-  "item.minecobbraft.malloc.tooltip": "With great power, comes great responsibility",
+  "item.minecobbraft.heap.tooltip": "With great power, comes great responsibility",
+
   "item.minecobbraft.music_disc_fur_elise": "Music Disc",
   "item.minecobbraft.music_disc_fur_elise.desc": "Beethoven - Für Elise",
+
+  "block.minecobbraft.rust_rose": "Rust Rose",
+
+  "block.minecobbraft.therock": "Therock",
+  "subtitles.minecobbraft.vine_boom": "Ayo?",
+
   "item.minecobbraft.rust_crab_spawn_egg": "Rust Crab Spawn Egg",
   "item.minecobbraft.detecitvekaktus_spawn_egg": "DetectiveKaktus Spawn Egg",
   "item.minecobbraft.localtexan_spawn_egg": "LocalTexan Spawn Egg",
   "item.minecobbraft.proh14_spawn_egg": "Proh14 Spawn Egg",
-  "item.minecobbraft.tsoding_spawn_egg": "Tsoding Spawn Egg"
+  "item.minecobbraft.tsoding_spawn_egg": "Tsoding Spawn Egg",
+
+  "advancement.minecobbraft.webdev.title": "Web Developer",
+  "advancement.minecobbraft.webdev.description": "Get your first piece of JavaScript",
+  "advancement.minecobbraft.automationzombie.title": "Automation Zombie",
+  "advancement.minecobbraft.automationzombie.description": "Become Python enjoyer",
+  "advancement.minecobbraft.minecraftdev.title": "Minecraft Developer",
+  "advancement.minecobbraft.minecraftdev.description": "Dive into the Java programming language world",
+  "advancement.minecobbraft.realprogrammer.title": "Real Programmer",
+  "advancement.minecobbraft.realprogrammer.description": "Enjoy the true power of the C programming language",
+  "advancement.minecobbraft.furelise.title": "Fur Elise",
+  "advancement.minecobbraft.furelise.description": "Cobb's gonna appreciate it",
+  "advancement.minecobbraft.rustification.title": "Rustification",
+  "advancement.minecobbraft.rustification.description": "Get rose affected by the rust fungus"
 }

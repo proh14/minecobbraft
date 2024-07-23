@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:minecobbraft/minecraftdev",
+  "criteria": {
+    "got_c": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:c"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.realprogrammer.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:c"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.realprogrammer.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_c"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

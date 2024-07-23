@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:minecobbraft/automationzombie",
+  "criteria": {
+    "got_java": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecobbraft:java"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancement.minecobbraft.minecraftdev.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecobbraft:java"
+    },
+    "title": {
+      "translate": "advancement.minecobbraft.minecraftdev.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_java"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
