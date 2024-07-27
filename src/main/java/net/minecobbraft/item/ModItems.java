@@ -130,6 +130,8 @@ public class ModItems {
     .maxCount(1)
     .maxDamage(ModWorld.LOW_MEDIUM_DURABILITY)));
 
+  public static final Item CANO = registerItem("cano", new Item(new Item.Settings()));
+
   public static final Item MUSIC_DISC_FUR_ELISE = registerItem("music_disc_fur_elise",
     new Item(new Item.Settings()
       .rarity(Rarity.RARE)

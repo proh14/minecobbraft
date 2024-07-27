@@ -87,8 +87,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     itemModelGenerator.register(ModItems.HEAP, Models.GENERATED);
 
-    itemModelGenerator.register(ModItems.MUSIC_DISC_FUR_ELISE, Models.HANDHELD);
+    itemModelGenerator.register(ModItems.CANO, Models.GENERATED);
 
+    itemModelGenerator.register(ModItems.MUSIC_DISC_FUR_ELISE, Models.HANDHELD);
 
     itemModelGenerator.register(ModItems.RUST_CRAB_SPAWN_EGG,
       new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
