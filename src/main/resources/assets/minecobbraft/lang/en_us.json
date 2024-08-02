@@ -58,5 +58,6 @@
   "item.minecobbraft.malloc.tooltip": "With great power, comes great responsability",
   "item.minecobbraft.music_disc_fur_elise": "Music Disc",
   "item.minecobbraft.music_disc_fur_elise.desc": "Beethoven - Für Elise",
-  "block.minecobbraft.piano": "Piano"
+  "block.minecobbraft.piano": "Piano",
+  "block.minecobbraft.composing_table": "Composing Table"
 }

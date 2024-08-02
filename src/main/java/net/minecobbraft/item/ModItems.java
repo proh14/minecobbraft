@@ -168,11 +168,18 @@ public class ModItems {
     entries.addAfter(Items.DIAMOND, C);
   }
 
+  private static void addItemsToRedstoneGroup(FabricItemGroupEntries entries) {
+    entries.add(ModBlocks.THEROCK);
+    entries.add(ModBlocks.PIANO);
+    entries.add(ModBlocks.COMPOSING_TABLE);
+  }
+
   public static void registerModItems() {
     Minecobbraft.LOGGER.info("Registering all Items for " + Minecobbraft.MOD_ID);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatItemGroup);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalItemGroup);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
     ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientsItemGroup);
+    ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(ModItems::addItemsToRedstoneGroup);
   }
 }

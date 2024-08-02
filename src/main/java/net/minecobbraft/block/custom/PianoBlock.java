@@ -9,6 +9,9 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
@@ -21,6 +24,7 @@ import org.jetbrains.annotations.Nullable;
 public class PianoBlock extends BlockWithEntity implements BlockEntityProvider {
   private static final VoxelShape SHAPE = PianoBlock.createCuboidShape(0,0,0, 16, 12, 13);
   public static final MapCodec<PianoBlock> CODEC = PianoBlock.createCodec(PianoBlock::new);
+  public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
   public PianoBlock(Settings settings){
     super(settings);
@@ -76,5 +80,10 @@ public class PianoBlock extends BlockWithEntity implements BlockEntityProvider {
   @Override
   public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
     return validateTicker(type, ModBlockEntites.PIANO_BLOCK_ENTITY, (world1, pos, state1, blockEntity) -> blockEntity.tick(world1,pos,state1));
+  }
+
+  @Override
+  protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    builder.add(FACING);
   }
 }
